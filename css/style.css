@@ -1,0 +1,50 @@
+
+@theme {
+    --font-merriweathersans: "Merriweather Sans", sans-serif;
+    --font-merriweather: "Merriweather", serif;
+    --color-primary: #00413C;
+    --color-secondary: #F0B973;
+    --color-tertiary: #FC393C;
+}
+
+.nav-link {
+    position: relative;
+    color: white;
+    font-family: var(--font-merriweathersans);
+    text-decoration: none;
+    transition: color 300ms ease;
+    hight: 100%
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secondary);
+    transition: width 300ms ease;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+p{
+    font-family: var(--font-merriweathersans);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.group:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

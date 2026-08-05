@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website title -->
+    <title>Zur Kluse</title>
+
+    <!-- External CSS stylesheet -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Tailwind CSS CDN - v4.0.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'merriweathersans': ['Merriweather Sans', 'sans-serif'],
+                        'merriweather': ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        'primary': '#00413C',
+                        'secondary': '#F0B973',
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @theme {
+  --font-merriweather: "Merriweather", serif;
+  --font-merriweathersans: "Merriweather Sans", sans-serif;
+
+  --color-primary: #00413C;
+  --color-secondary: #F0B973;
+    --color-tertiary: #FC393C;
+
+}
+</style>
+</head>
+
+<body>
+
+    <header class="fixed top-0 left-0 right-0 z-50">
+
+        <!-- ================= HeadLine ================= -->
+        <div id="headline"
+            class="flex justify-center items-center gap-2 bg-primary text-white py-1 spacing-x-4 text-xs uppercase font-merriweathersans traking-wide my-auto leading-5 traking-wide">
+            <span class="hidden md:block"> <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="instagram-icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </span>
+            <span class="hidden md:block"> | Zur Kluse · An d. Kluse 27b · 45133 Essen |
+            </span>
+            <span class="hidden md:block">
+                Telefon: +40 201 441 717 |
+            </span>
+            <span class="flex items-center gap-2 text-secondary">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                HEUTE geöffnet
+            </span> |
+            <span>10 bis 22 Uhr</span>
+
+        </div>
+
+        <!-- ================= Navbar ================= -->
+        <nav id="navbar"
+            class="fixed top-6 left-0 w-full z-50 bg-transparent transition-all duration-300 drop-shadow-xl">
+
+            <div class="container mx-auto px-5 lg:px-10">
+
+                <div class="flex items-center justify-between xl:justify-around py-4">
+
+                    <!-- Logo -->
+                    <img src="assets/logo.svg" alt="" class="hidden max-h-[80px] md:block">
+                    <img src="assets/Mlogo.svg" alt="" class="max-h-[40px] md:hidden">
+                    
+                    <!-- Navigation -->
+                    <ul class="hidden xl:flex gap-8 uppercase font-merriweathersans text-xs">
+                        
+                        <li><a href="#" class="nav-link">Speisen & Getränke</a></li>
+
+                        <!-- Dropdown -->
+                        <li class="relative group">
+
+                            <a href="#" class="nav-link flex items-center gap-1">
+                                Lokalität
+                                <span
+                                    class="material-symbols-outlined text-base transition duration-300 group-hover:rotate-180">
+                                    expand_more
+                                </span>
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute left-0 top-full mt-6 w-64 bg-primary rounded-lg py-5 opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 shadow-2xl">
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Zur Kluse
+                                </a>
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Schirmbar
+                                </a>
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Brauerei
+                                </a>
+
+                            </div>
+
+                        </li>
+                        <li class="relative group">
+
+                            <a href="#" class="nav-link flex items-center gap-1">
+                                Events & Feiern
+                                <span
+                                    class="material-symbols-outlined text-base transition duration-300 group-hover:rotate-180">
+                                    expand_more
+                                </span>
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute left-0 top-full mt-6 w-64 bg-primary rounded-lg py-5 opacity-0 invisible translate-y-5 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 shadow-2xl">
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Zur Kluse
+                                </a>
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Schirmbar
+                                </a>
+
+                                <a href="#" class="block px-6 py-3 text-white hover:text-secondary transition">
+                                    Brauerei
+                                </a>
+
+                            </div>
+
+                        </li>
+
+                        <li><a href="#" class="nav-link">Aktuelles</a></li>
+                        <li><a href="#" class="nav-link">Karriere</a></li>
+                        <li><a href="#" class="nav-link">Anfahrt</a></li>
+                        <li><a href="#" class="nav-link">Kontakt</a></li>
+
+                    </ul>
+
+                    <!-- Reservation Button -->
+                    <button
+                        class="hidden xl:block rounded-full border border-secondary px-8 py-4 text-xs uppercase font-merriweathersans text-secondary transition-all duration-300 hover:border-white hover:bg-secondary hover:text-white">
+                        Reservieren
+                    </button>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" class="xl:hidden">
+                        <span class="material-symbols-outlined text-3xl text-white">
+                            menu
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+            <!-- ================= Mobile Menu ================= -->
+            <div id="mobileMenu"
+                class="fixed top-0 right-[-100%] w-full h-screen bg-primary z-[999] transition-all duration-500 xl:hidden">
+
+                <div class="p-8 flex flex-col h-full">
+
+                    <!-- Top -->
+                    <div class="flex justify-between items-center">
+
+                        <img src="assets/Mlogo.svg" class="max-h-[40px]" alt="">
+
+                        <button id="closeMenu">
+                            <span class="material-symbols-outlined text-4xl text-white">
+                                close
+                            </span>
+                        </button>
+
+                    </div>
+
+                    <!-- Menu -->
+                    <ul class="mt-12 space-y-2 uppercase font-merriweather text-white font-light">
+
+                        <li class="border-b border-white/20 pb-5">
+                            <a href="#">Speisen & Getränke</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="border-b border-white/20 pb-5">
+
+                            <button class="submenu-btn flex justify-between items-center w-full uppercase">
+
+                                <span>Lokalität</span>
+
+                                <span class="material-symbols-outlined transition duration-300">
+                                    expand_more
+                                </span>
+
+                            </button>
+
+                            <ul class="submenu hidden mt-5 pl-2 space-y-3 text-sm font-light uppercase">
+
+                                <li><a href="#">Zur Kluse</a></li>
+                                <li><a href="#">Schirmbar</a></li>
+                                <li class="text-secondary"><a href="#">Brauerei</a></li>
+
+                            </ul>
+
+                        </li>
+                        <!-- Dropdown -->
+                        <li class="border-b border-white/20 pb-5">
+
+                            <button class="submenu-btn flex justify-between items-center w-full uppercase">
+
+                                <span>Events & Feiern</span>
+
+                                <span class="material-symbols-outlined transition duration-300">
+                                    expand_more
+                                </span>
+
+                            </button>
+
+                            <ul class="submenu hidden mt-5 pl-2 space-y-3 font-light text-sm uppercase">
+
+                                <li><a href="#">Zur Kluse</a></li>
+                                <li><a href="#">Schirmbar</a></li>
+                                <li class="text-secondary"><a href="#">Brauerei</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="border-b border-white/20 pb-5">
+                            <a href="#">Aktuelles</a>
+                        </li>
+
+                        <li class="border-b border-white/20 pb-5">
+                            <a href="#">Karriere</a>
+                        </li>
+
+                        <li class="border-b border-white/20 pb-5">
+                            <a href="#">Anfahrt</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Kontakt</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Bottom -->
+                    <div class="mt-auto w-full">
+
+                        <div class="flex w-full justify-between items-center">
+
+
+                            <button
+                                class="bg-secondary rounded-full px-10 py-4 uppercase text-primary font-semibold w-full max-w-fit mx-auto">
+                                Reservierung
+                            </button>
+                        </div>
+
+                        <div class="flex w-full justify-between items-center mt-10 text-white">
+
+                            <p class="text-sm">
+                                Impressum | Datenschutz
+                            </p>
+
+                            <img src="assets/instagram.svg" class="w-6">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="z-0 bg-white">
+
+        <!-- ================= Hero ================= -->
+        <section id="hero" class="relative h-screen overflow-hidden">
+
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="assets/Zur Kluse Bildwelten_Seedance 2.0 Reference_2026-05-05_15-46-35.mp4"
+                    type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-primary/90"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 h-full flex items-center justify-center">
+
+                <div class="container mx-auto px-6 h-full">
+
+                    <div class="flex flex-col h-full justify-end text-center pb-20">
+
+                        <!-- Main Heading -->
+                        <div>
+
+                            <h1
+                                class="font-merriweather text-white text-5xl md:text-7xl lg:text-[78px] leading-none font-light">
+                                Gutes Essen wird hier
+                            </h1>
+
+                            <img src="assets/besonders..svg" alt="besonders"
+                                class="mx-auto w-[300px] md:w-[420px] lg:w-[560px] -mt-3">
+
+                        </div>
+
+                        <!-- Categories -->
+                        <p class="mt-14 font-merriweather uppercase tracking-[3px] text-white text-xl md:text-3xl">
+                            CAFÉ • RESTAURANT • BIERGARTEN • SCHIRMBAR
+                        </p>
+
+                        <!-- Opening Hours -->
+                        <div class="mt-10 text-secondary hidden md:block">
+
+                            <h3 class="font-merriweather text-2xl md:text-4xl">
+                                Heute geöffnet | 12:00–22:00 Uhr
+                            </h3>
+
+                            <p class="mt-2 text-xl md:text-3xl font-merriweather">
+                                durchgehend warme Küche
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- sidebar -->
+            <div class="hidden xl:flex absolute top-1/2 right-6 -translate-y-1/2  flex-col gap-4 z-50">
+
+                <button
+                    class="w-14 h-14 rounded-full border border-secondary text-secondary flex items-center justify-center hover:bg-secondary hover:text-primary transition">
+                    <span class="material-symbols-outlined">table_bar</span>
+                </button>
+
+                <button
+                    class="w-14 h-14 rounded-full border border-secondary text-secondary flex items-center justify-center hover:bg-secondary hover:text-primary transition">
+                    <span class="material-symbols-outlined">restaurant</span>
+                </button>
+
+                <button
+                    class="w-14 h-14 rounded-full border border-secondary text-secondary flex items-center justify-center hover:bg-secondary hover:text-primary transition">
+                    <span class="material-symbols-outlined">navigation</span>
+                </button>
+                <button
+                    class="w-14 h-14 rounded-full border border-secondary text-secondary flex tems-center justify-center transition-all duration-300 hover:-rotate-20 hover:scale-105 hover:shadow-[0_0_20px_rgba(240,185,115,0.8)] hover:border-secondary">
+
+                    <img src="assets/Union.svg" alt="" class="w-14 h-14">
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Cards ================= -->
+        <section class="grid grid-cols-1 lg:grid-cols-2">
+
+            <!-- Card 1 -->
+            <div class="relative h-[225px] md:h-[512px] overflow-hidden">
+
+                <!-- Background Image -->
+                <img src="assets/SCHIRMBAR.png" alt="Schirmbar" class="w-full h-full object-cover">
+
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black/40"></div>
+
+                <!-- Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-secondary/60 md:from-primary/90 to-secondary/10 md:to-primary/10">
+                </div>
+
+                <!-- Content -->
+                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                    <p class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
+                        SCHIRMBAR
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <button
+                    class="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 border border-white rounded-full w-20 h-10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition material-symbols-outlined">
+                    arrow_right_alt
+                </button>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="relative h-[225px] md:h-[512px] overflow-hidden">
+
+                <!-- Background Image -->
+                <img src="assets/EVENTS&Feiern.png" alt="Events & Feiern" class="w-full h-full object-cover">
+
+                <!-- Dark Overlay -->
+                <div class="absolute inset-0 bg-black/40"></div>
+
+                <!-- Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-t from-secondary/60 md:from-primary/90 to-secondary/10 md:to-primary/10">
+                </div>
+
+                <!-- Content -->
+                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                    <p class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
+                        EVENTS &amp; FEIERN
+                    </p>
+                </div>
+
+                <!-- Button -->
+                <button
+                    class="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 border border-white rounded-full w-20 h-10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition material-symbols-outlined">
+                    arrow_right_alt
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Standort ================= -->
+        <section id="standort" class="relative overflow-hidden bg-white py-14 md:py-24">
+
+            <!-- Background Number -->
+            <h1
+                class="hidden md:block absolute -top-20 left-1/2 -translate-x-[65%] text-[400px] lg:text-[983px] font-bold text-gray-200/40 select-none pointer-events-none leading-none font-merriweather">
+                1785
+            </h1>
+
+            <div class="container mx-auto px-6 relative z-10">
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+
+                    <!-- Left Content -->
+                    <div class="lg:col-span-7 flex gap-10">
+
+                        <!-- Vertical Label -->
+                        <div class="hidden lg:flex flex-col items-center">
+
+                            <span
+                                class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-primary font-merriweathersans">
+                                Standort
+                            </span>
+
+                            <span class="mt-4 h-14 w-px bg-secondary"></span>
+
+                        </div>
+
+                        <div class="flex-1">
+
+                            <h2
+                                class="font-merriweather text-2xl md:text-4xl lg:text-6xl text-primary leading-tight text-center md:text-start ">
+                                Die Erlebnisgastronomie <br>
+                                in Essen-Bredeney
+                            </h2>
+
+                            <div class="mt-6 md:mt-10 space-y-8 max-w-xl text-center md:text-left">
+
+                                <p class="text-gray-700 leading-8">
+                                    Das Restaurant „Zur Kluse“ befindet sich im Süden von Essen,
+                                    zwischen Bredeney und Stadtwald, direkt am Waldrand. <span
+                                        class="hidden md:inline">Passend
+                                        zu der altehrwürdigen Tradition des restaurierten
+                                        Fachwerkhauses wurde ein stilvolles Ambiente gewählt, das
+                                        sowohl zum langen Verweilen als auch zu einem kurzen
+                                        Abstecher einlädt.</span>
+                                </p>
+
+                                <p class="text-gray-700 leading-8 hidden md:block">
+                                    Umgeben von Natur bietet dieser besondere Standort die
+                                    perfekte Kulisse, um dem Alltag zu entfliehen und in
+                                    entspannter Atmosphäre anzukommen. Ob kurzer Abstecher oder
+                                    ausgedehnter Aufenthalt: Hier verbinden sich Ruhe,
+                                    Charakter und echtes Genussgefühl zu einem Ort, an den man
+                                    immer wieder gerne zurückkehrt.
+                                </p>
+
+                            </div>
+
+                            <!-- Button -->
+                            <a href="#"
+                                class="inline-flex items-center justify-center gap-5 mt-5 md:mt-12 border border-primary rounded-full px-8 py-4 text-primary font-medium uppercase tracking-wide transition-all duration-300 hover:bg-primary hover:text-white group mx-auto md:mx-0">
+
+                                Mehr erfahren
+
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="lg:col-span-5 ">
+
+                        <div class="overflow-hidden">
+
+                            <img src="assets/Standort.jpg" alt="Standort"
+                                class="w-full max-h-[425px] md:max-h-[500px] lg:max-h-[700px] object-cover transition duration-700 hover:scale-105">
+
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="mt-8">
+
+                            <div class="flex gap-2">
+
+                                <span class="w-20 h-[2px] bg-primary"></span>
+                                <span class="w-20 h-[2px] bg-gray-300"></span>
+                                <span class="w-20 h-[2px] bg-gray-300"></span>
+                                <span class="w-20 h-[2px] bg-gray-300"></span>
+
+                            </div>
+
+                            <p class="mt-3 text-sm text-primary font-medium">
+                                01/04
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= SPEISEN & GETRÄNKE ================= -->
+        <section id="angebot" class="relative py-12 lg:py-24 overflow-hidden">
+
+            <!-- Background Pattern -->
+            <img src="assets/angebotBg.png" alt=""
+                class="hidden md:block absolute top-0 md:w-full max-h-[720px] z-0 pointer-events-none">
+
+            <div class="container mx-auto px-6 z-10">
+
+                <div class="grid lg:grid-cols-12 gap-7 lg:gap-16">
+
+                    <!-- Left Image -->
+                    <div class="lg:col-span-6 relative flex gap-10 justify-between order-2 lg:order-1">
+
+                        <!-- Vertical Label -->
+                        <div class="hidden lg:flex flex-col items-center">
+
+                            <span
+                                class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-primary font-merriweathersans text-white">
+                                Speisen & Getränke
+                            </span>
+
+                            <span class="mt-4 h-14 w-px bg-secondary"></span>
+
+                        </div>
+
+                        <img src="assets/Food1.png" alt="Food"
+                            class="w-full lg:w-[577px] h-[432px] md:h-[825px] object-cover">
+
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="lg:col-span-6 flex flex-col z-10 order-1 lg:order-2 ">
+
+                        <div class="max-w-md bg-primary ">
+
+                            <h2
+                                class="font-merriweather tetx-2xl md:text-4xl lg:text-6xl text-white leading-tight mb-8 text-center md:text-left">
+                                Unser Angebot
+                            </h2>
+
+                            <p class="text-white md:text-lg leading-9 mb-10">
+                                Genießen Sie täglich durchgehend warme Küche –
+                                ergänzt durch eine umfangreiche Weinkarte,
+                                ausgewählte Spirituosen und eine feine Whiskey-Auswahl.
+                            </p>
+
+                            <a href="#"
+                                class="inline-flex items-center gap-6 rounded-full bg-secondary px-8 py-4 text-primary uppercase font-semibold transition duration-300 hover:bg-primary hover:text-secondary border">
+
+                                Speisen & Getränke
+
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+
+                            </a>
+
+                        </div>
+
+                        <!-- Bottom Image -->
+                        <div class="mt-20 flex justify-center">
+
+                            <img src="assets/wine.jpg" alt="Wine"
+                                class="hidden lg:block w-[400px] h-[542px] lg:mr-10 object-cover">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Aktuelles ================= -->
+        <section id="aktuelles" class="py-14 md:py-24 bg-white overflow-hidden">
+
+            <div class="container mx-auto px-5">
+
+                <div class="grid lg:grid-cols-12 gap-y-12">
+
+                    <!-- Left -->
+                    <div class="lg:col-span-5">
+
+                        <div class="flex gap-10">
+
+                            <!-- Vertical Label -->
+                            <div class="hidden lg:flex flex-col items-center">
+
+                                <span
+                                    class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-primary font-merriweathersans">
+                                    Aktuelles
+                                </span>
+
+                                <span class="w-px h-12 bg-secondary mt-4"></span>
+
+                            </div>
+
+                            <div class="flex flex-col w-full">
+
+                                <h2
+                                    class="font-merriweather text-primary text-[40px] lg:text-6xl leading-tight text-center lg:text-left">
+                                    Immer up-to-date </h2>
+
+                                <p class="hidden lg:block mt-4 text-primary text-xl max-w-md">
+                                    Ob neue Genussmomente auf der Karte oder
+                                    besondere Erlebnisse vor Ort –
+                                    hier erfahren Sie alles.
+                                </p>
+
+                                <!-- Button -->
+                                <a href="#"
+                                    class="hidden lg:flex group w-fit lg:inline-flex items-center gap-5 border border-primary rounded-full px-8 py-4 mt-8 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
+
+                                    ZuallenNeuigkeiten
+
+                                    <span
+                                        class="material-symbols-outlined transition text-3xl duration-300 group-hover:translate-x-2">
+                                        arrow_right_alt
+                                    </span>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <div class="lg:col-span-7">
+
+                        <div class="grid md:grid-cols-2 gap-8">
+
+                            <!-- Card -->
+                            <article class="group">
+
+                                <div class="overflow-hidden">
+
+                                    <img src="assets/news.png" alt=""
+                                        class="w-full h-[210px] object-cover transition duration-700 group-hover:scale-105">
+
+                                </div>
+
+                                <div class="mt-8">
+
+                                    <h3 class="font-merriweather text-primary text-lg font-medium">
+                                        Biergarten-Saison eröffnet
+                                    </h3>
+
+                                    <p class="mt-5 text-primary leading-normal text-sm font-merriweathersans">
+                                        Die warmen Tage sind zurück – genießen
+                                        Sie die ersten Sonnenstrahlen in unserem
+                                        Biergarten ...
+                                    </p>
+
+                                    <div class="mt-10 flex justify-between items-center">
+
+                                        <p class="text-primary font-semibold ">
+                                            5. Mai 2026
+                                        </p>
+
+                                        <a href="#"
+                                            class="group/button flex justify-center items-center w-20 h-12 border border-primary rounded-full hover:bg-primary duration-300">
+
+                                            <span
+                                                class="text-3xl text-primary group-hover/button:text-white transition duration-300 material-symbols-outlined">
+                                                arrow_right_alt
+                                            </span>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <!-- Card -->
+                            <article class="group">
+
+                                <div class="overflow-hidden">
+
+                                    <img src="assets/news.png" alt=""
+                                        class="w-full h-[210px] object-cover transition duration-700 group-hover:scale-105">
+
+                                </div>
+
+                                <div class="mt-8">
+
+                                    <h3 class="font-merriweather text-primary text-lg font-medium">
+                                        Biergarten-Saison eröffnet
+                                    </h3>
+
+                                    <p class="mt-5 text-primary leading-normal text-sm font-light">
+                                        Die warmen Tage sind zurück – genießen
+                                        Sie die ersten Sonnenstrahlen in unserem
+                                        Biergarten ...
+                                    </p>
+
+                                    <div class="mt-10 flex justify-between items-center">
+
+                                        <p class="text-primary font-semibold">
+                                            6. Mai 2026
+                                        </p>
+
+                                        <a href="#"
+                                            class="group/button flex justify-center items-center w-20 h-12 border border-primary rounded-full hover:bg-primary duration-300">
+
+                                            <span
+                                                class="text-3xl text-primary group-hover/button:text-white transition duration-300 material-symbols-outlined">
+                                                arrow_right_alt
+                                            </span>
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                            <!-- Button -->
+                            <a href="#"
+                                class="md:hidden  group inline-block w-fit mx-auto items-center gap-5 border border-primary rounded-full px-8 py-4 mt-4 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
+
+                                ZuallenNeuigkeiten
+
+                                <span
+                                    class="material-symbols-outlined transition text-3xl duration-300 group-hover:translate-x-2">
+                                    arrow_right_alt
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= KLUSE EVENTS ================= -->
+        <section id="kluse-events" class="bg-white pb-14 md:pb-24">
+
+            <div class="relative overflow-hidden bg-primary">
+
+                <!-- Background Video -->
+                <video autoplay loop muted playsinline
+                    class="absolute inset-0 w-full h-full object-cover opacity-5 pointer-events-none">
+                    <source src="assets/videos/Zur Kluse Bildwelten_Kling 3_2026-03-05_13-43-15.mp4" type="video/mp4">
+                </video>
+
+                <div class="container mx-auto px-5 relative z-10 py-32 lg:py-40">
+
+                    <div class="grid lg:grid-cols-12 gap-y-12">
+
+                        <!-- Left -->
+                        <div class="lg:col-span-5">
+
+                            <div class="flex gap-10">
+
+                                <!-- Vertical Label -->
+                                <div class="hidden lg:flex flex-col items-center">
+
+                                    <span
+                                        class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-white font-merriweathersans">
+                                        Neuigkeiten
+                                    </span>
+
+                                    <span class="w-px h-12 bg-secondary mt-4"></span>
+
+                                </div>
+
+                                <!-- image -->
+                                <div class="flex items-center justify-center w-full">
+
+                                    <img src="assets/Union.svg" alt="" class=" object-cover">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Right -->
+                        <div class="lg:col-span-6">
+
+                            <div class="text-center md:text-left">
+
+                                <h1 class="font-merriweather text-4xl lg:text-[68px] leading-tight text-white">Afterwork
+                                    klingt hier</h1>
+                                <img src="/assets/einfach-besser..svg" alt="einfach-besser"
+                                    class="-mt-2 md:-mt-6 pr-16 ">
+                                <p class="text-white my-6 font-light leading-7">
+                                    Dein Feierabend hat endlich einen Sinn. Frische Luft, fette Beats und Feierlaune
+                                    pur. Wir bringen euch zum Tanzen während der goldenen Stunden an der Kluse.
+                                </p>
+                                <p class="text-white font-light leading-7">Genießt euren Feierabend mit eiskalten
+                                    Drinks, ausgewählten Lieblingsweinen, ganz
+                                    chillig an unserem Klusee, oder auf der Tanzfläche.</p>
+
+                                <!-- New Event -->
+                                <div class="mt-10 space-y-2">
+                                    <h2 class="font-medium font-merriweather text-secondary">Nächste Veranstaltung:</h2>
+                                    <h2 class="font-medium font-merriweather text-3xl text-white">17, Juni 2026</h2>
+                                </div>
+
+
+                                <!-- Button -->
+                                <a href="#"
+                                    class="inline-flex items-center gap-5 mt-12 bg-tertiary rounded-full px-8 py-4 text-white font-medium uppercase tracking-wide transition-all duration-300 hover:bg-white hover:text-tertiary group">
+
+                                    Mehr erfahren
+
+                                    <span
+                                        class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">
+                                        arrow_right_alt
+
+                                    </span>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="container mx-auto px-5 -mt-24 relative z-20">
+
+                <div class="grid lg:grid-cols-12 gap-10 items-end">
+
+                    <!-- Left Image -->
+                    <div class="hidden  lg:col-span-5 md:flex justify-center items-center">
+                        <img src="assets/event-left.jpg" alt="" class="w-[355px] h-[480px] object-cover">
+                    </div>
+
+                    <!-- Right -->
+                    <div class="lg:col-span-6">
+
+                        <!-- Main Image -->
+                        <img src="/assets/event-right.jpg" alt="" class="w-full h-[420px] object-cover">
+
+                        <!-- Pagination -->
+                        <div class="mt-5 flex gap-2">
+
+                            <span class="w-20 h-[2px] bg-primary"></span>
+                            <span class="w-20 h-[2px] bg-gray-300"></span>
+                            <span class="w-20 h-[2px] bg-gray-300"></span>
+                            <span class="w-20 h-[2px] bg-gray-300"></span>
+
+                        </div>
+
+                        <p class="text-primary text-xs mt-2">
+                            01/04
+                        </p>
+
+                        <!-- Social -->
+                        <div class="mt-10 md:w-1/2 ml-auto">
+
+                            <h2 class="font-merriweather text-primary text-5xl">
+                                Let's get social
+                            </h2>
+
+                            <p class="text-primary mt-4 leading-8">
+                                Für mehr Afterglow <br>
+                                folgt uns auf Instagram.
+                            </p>
+
+                            <a href="#"
+                                class="inline-flex items-center gap-3 border border-primary rounded-full px-6 py-3 mt-8 hover:bg-primary hover:text-white transition duration-300 group">
+
+                                <img src="assets/insta.svg" class="w-5">
+
+                                <span class="font-semibold">
+                                    zurkluse
+                                </span>
+
+                                <span
+                                    class="group-hover:translate-x-1 transition duration-300 material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section id="faq" class="relative overflow-hidden bg-[#F5F8F8] py-14 md:py-28 pb-56">
+
+            <!-- Background Illustration -->
+            <img src="assets/faqbg.png" alt=""
+                class="absolute bottom-0 right-0 w-full max-w-[1100px] pointer-events-none select-none">
+
+            <div class="container mx-auto px-5 relative z-10">
+
+                <div class="flex gap-8">
+
+                    <!-- Vertical Label -->
+                    <div class="hidden lg:flex flex-col items-center pt-5">
+
+                        <span
+                            class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs font-merriweathersans text-primary">
+                            FAQ
+                        </span>
+
+                        <span class="mt-4 h-10 w-px bg-secondary"></span>
+
+                    </div>
+
+                    <!-- Content -->
+                    <div class="w-full lg:max-w-5xl mx-auto">
+
+                        <h2
+                            class="font-merriweather text-primary text-3xl md:text-4xl lg:text-[40px] leading-tight mb-12 md:mb-20 text-center md:text-left">
+                            Eure Fragen – <br class="md:hidden"> unsere Antworten
+                        </h2>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Sind Hunde erlaubt?
+                                </span>
+
+                                <span class="text-4xl text-primary transition faq-icon material-symbols-outlined">
+                                    keyboard_arrow_up
+                                </span>
+
+                            </button>
+
+                            <div class="faq-content mt-2">
+
+                                <p class="font-light text-xs md:text-lg text-gray-700 md:leading-8">
+                                    Ja, Hunde sind bei uns herzlich willkommen.
+                                    Bitte achten Sie darauf, dass Ihr Vierbeiner angeleint ist.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Ist Zur Kluse barrierefrei?
+                                </span>
+
+                                <span
+                                    class="faq-icon text-3xl text-primary transition-all duration-300 material-symbols-outlined">
+                                    keyboard_arrow_down
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-content hidden mt-2">
+                                <p class="font-light text-xs md:text-lg text-gray-700">
+                                    Ja, EC- und Kreditkarten werden akzeptiert.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Kann ich mit Karte bezahlen?
+                                </span>
+
+                                <span
+                                    class="material-symbols-outlined faq-icon text-3xl text-primary transition-all duration-300">
+                                    keyboard_arrow_down
+                                </span>
+
+                            </button>
+
+                            <div class="faq-content hidden mt-2">
+                                <p class="font-light text-xs md:text-lg text-gray-700">
+                                    Ja, EC- und Kreditkarten werden akzeptiert.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Gibt es Parkmöglichkeiten vor Ort?
+                                </span>
+
+                                <span
+                                    class="material-symbols-outlined faq-icon text-3xl text-primary transition-all duration-300">
+                                    keyboard_arrow_down
+                                </span>
+
+                            </button>
+
+                            <div class="faq-content hidden mt-2">
+                                <p class="font-light text-xs md:text-lg text-gray-700">
+                                    Kostenlose Parkplätze stehen direkt am Restaurant zur Verfügung.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Ist die Anreise mit öffentlichen Verkehrsmitteln möglich?
+                                </span>
+
+                                <span
+                                    class=" material-symbols-outlined faq-icon text-3xl text-primary transition-all duration-300">
+                                    keyboard_arrow_down
+                                </span>
+
+                            </button>
+
+                            <div class="faq-content hidden mt-2">
+                                <p class="font-light text-xs md:text-lg text-gray-700">
+                                    Ja, mehrere Buslinien halten in unmittelbarer Nähe.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Item -->
+                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+
+                            <button class="faq-btn flex justify-between items-center w-full text-left">
+
+                                <span class="font-merriweather font-medium md:text-2xl text-primary">
+                                    Sind Kinder und Kinderwagen willkommen?
+                                </span>
+
+                                <span
+                                    class="material-symbols-outlined faq-icon text-3xl text-primary transition-all duration-300">
+                                    keyboard_arrow_down
+                                </span>
+
+                            </button>
+
+                            <div class="faq-content hidden mt-2">
+                                <p class="font-light text-xs md:text-lg text-gray-700">
+                                    Selbstverständlich – Familien sind herzlich willkommen.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= KARRIERE ================= -->
+        <section id="karriere" class="bg-white pb-24 w-full">
+            <img src="assets/karriereBg.png" alt="" class="z-0 absolute h-[650px] w-full mx-auto px-0 bg-primary ">
+            <div class="container pt-32 mx-auto px-5 relative top-0 z-10 h-full flex items-center">
+
+                <div class="grid lg:grid-cols-12 gap-10 items-start w-full">
+
+                    <!-- Left -->
+                    <div class="lg:col-span-6">
+
+                        <div class="flex gap-10">
+
+                            <!-- Vertical Label -->
+                            <div class="hidden lg:flex flex-col items-center">
+
+                                <span
+                                    class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-white font-merriweathersans">
+                                    Karriere
+                                </span>
+
+                                <span class="mt-4 h-14 w-px bg-secondary"></span>
+
+                            </div>
+
+                            <!-- Employee -->
+                            <div class="relative mx-auto">
+
+                                <img src="assets/karriere-person.jpg" alt=""
+                                    class="w-full max-w-[570px] h-[800px] object-cover relative shadow-xl z-20">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right -->
+                    <div class="lg:col-span-5 ml-auto">
+
+                        <div class="max-w-md lg:ml-10">
+
+                            <h2 class="font-merriweather font-light text-secondary text-[40px] leading-normal">
+                                Mehr als nur ein <br> Arbeitsplatz
+                            </h2>
+
+                            <p class="mt-8 text-white leading-8 font-light max-w-2/3">
+                                Ob neue Genussmomente auf der Karte
+                                oder besondere Erlebnisse vor Ort –
+                                hier erfahren Sie alles.
+                            </p>
+
+                            <!-- Button -->
+                            <a href="#"
+                                class="inline-flex items-center gap-5 mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide text-white transition-all duration-300 hover:bg-white hover:text-primary group font-merriweathersans">
+
+                                ZU DEN OFFENEN STELLEN
+
+                                <span
+                                    class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">
+                                    arrow_right_alt
+
+                                </span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= ANFAHRT ================= -->
+        <section id="anfahrt" class="bg-white  md:py-20 relative ">
+            <div class="container mx-auto px-4 ">
+
+                <!-- vertical label -->
+                <div class="hidden lg:flex flex-col items-center">
+
+                    <span
+                        class="[writing-mode:vertical-rl] rotate-180 uppercase tracking-[4px] text-xs text-primary font-merriweathersans">
+                        Anfahrt
+                    </span>
+
+                    <span class="mt-4 h-14 w-px bg-secondary"></span>
+
+                </div>
+
+                <!-- Right Content -->
+                <div class="lg:ml-10 md:max-w-1/2 lg:max-w-1/3">
+                    <h1
+                        class="text-[32px] md:text-[40px] font-light text-primary fony-merriweather leading-9 text-center lg:text-left">
+                        Viele Wege <br> führen
+                        Zur Kluse</h1>
+                    <p class="font-light mt-4 md:mt-10 text-center lg:text-left">Ob mit dem Auto oder den öffentlichen
+                        Verkehrsmitteln – zur Kluse ist
+                        bequem erreichbar. Sie finden uns in guter Lage.</p>
+                    <div class="mt-12 space-y-5 hidden lg:block">
+                        <h1><b>Kontakt</b><br>
+                            An d. Kluse 27b, 45133 Essen <br>
+                            Tel.: 0201 441717 <br>
+                            Mail: info@zurkluse.de</h1>
+
+                        <h1><b>Öffnungszeiten</b><br>
+
+                            Dienstag – Samstag | 12:00 – 22:00 Uhr <br>
+                            Sonntag | 12:00 – 21:00 Uhr <br>
+                            Montag | Ruhetag </h1>
+                    </div>
+                    <!-- Button -->
+                    <a href="#"
+                        class="inline-flex items-center gap-5 mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide transition-all duration-300 bg-secondary text-primary hover:bg-white hover:border-primary group font-merriweathersans">
+
+                        ANFAHRT
+                        <span
+                            class="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-2">
+                            arrow_right_alt
+
+                        </span>
+
+                    </a>
+
+                </div>
+            </div>
+            <img src="assets/map.png" alt=""
+                class="absolute right-0 bottom-0 h-full w-auto object-contain z-0 opacity-90 pointer-events-none">
+
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-primary text-white pt-20 pb-10">
+
+        <div class="container mx-auto px-6">
+
+            <!-- Top -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 sm:gap-8 lg:gap-16 max-w-7xl mx-auto">
+
+                <!-- Left -->
+                <div class="lg:col-span-6">
+
+                    <img src="assets/logo.svg" alt="Zur Kluse" class="w-40 mb-5 md:mb-10 hidden md:block">
+                    <img src="assets/Mlogo.svg" alt="Zur Kluse" class="w-40 mb-8 md:mb-10 mx-auto md:hidden">
+
+                    <img src="assets/footer-heading.svg" alt="Ein Ort zum verweilen" class="mb-8 mx-auto md:mx-0">
+
+                    <div class="hidden md:block md:max-w-md space-y-4 md:space-y-8 leading-8">
+                        <p class="text-sm">
+                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                            sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                            magna aliquyam erat, sed diam voluptua. At vero eos et
+                            accusam et justo duo dolores et ea rebum. Stet
+                        </p>
+
+                        <p class="text-sm">
+                            dolore magna aliquyam erat, sed diam voluptua.
+                            At vero eos et accusam et justo duo dolores et ea rebum.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+                <div class="lg:col-span-6">
+
+                    <!-- Features -->
+                    <div class="grid md:grid-cols-2 max-w-lg gap-y-4 mb-10 lg:mb-16">
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon1.svg" class="w-6">
+                            <span>Der Klusee mit eigenem Steg</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon2.svg" class="w-6">
+                            <span>Die größte Schirmbar im Ruhrgebiet</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon3.svg" class="w-6">
+                            <span>Separate Picknickplätze</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon4.svg" class="w-6">
+                            <span>Eigene Brauerei mit Biergarten</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon5.svg" class="w-6">
+                            <span>Zur Kluse Beats Eventreihe</span>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-xs">
+                            <img src="assets/icons/icon6.svg" class="w-6">
+                            <span>Hochzeitskapelle</span>
+                        </div>
+
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="grid md:grid-cols-2 gap-16">
+
+                        <div>
+
+                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-2">
+
+                                Kontakt
+                            </h3>
+
+                            <div class="space-y-1 text-xl leading-9">
+
+                                <ul class=" text-base font-light text-merriweathersans">
+                                    <li>An d. Kluse 27b, 45133 Essen</li>
+                                    <li>Tel.: 0201 441717</li>
+                                    <li>Mail: info@zurkluse.de</li>
+                                </ul>
+
+                            </div>
+
+                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-2 mt-6">
+                                Öffnungszeiten
+                            </h3>
+
+                            <ul class="space-y-1 text-base font-light text-merriweathersans">
+
+                                <li>Dienstag – Samstag | 12:00 – 22:00 Uhr</li>
+                                <li>Sonntag | 12:00 – 21:00 Uhr</li>
+                                <li>Montag | Ruhetag</li>
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Sitemap -->
+                        <div class="hidden">
+
+                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-2">
+                                Sitemap
+                            </h3>
+
+                            <ul class="space-y-1 text-base font-light text-merriweathersans">
+
+                                <li><a href="#">Reservierung</a></li>
+                                <li><a href="#">Speisen & Getränke</a></li>
+                                <li><a href="#">Lokalität</a></li>
+                                <li><a href="#">Brauerei</a></li>
+                                <li><a href="#">Anfahrt</a></li>
+                                <li><a href="#">Karriere</a></li>
+                                <li><a href="#">Hochzeiten</a></li>
+                                <li><a href="#">Feiern & Events</a></li>
+                                <li><a href="#">Aktuelles</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div
+                class="sm:mt-12 lg:mt-24 flex flex-col md:flex-row justify-between items-center pt-8 max-w-7xl mx-auto">
+
+                <p class="">
+                    © Zur Kluse 2026
+                </p>
+
+                <div class="flex gap-8 ">
+
+                    <a href="#" class="hover:text-secondary transition">
+                        Impressum
+                    </a>
+
+                    <a href="#" class="hover:text-secondary transition">
+                        Datenschutz
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-8 right-8 z-40 flex h-14 w-14 text-3xl translate-y-5 items-center justify-center rounded-full bg-primary text-white shadow-xl opacity-0 pointer-events-none transition-all duration-300 hover:-translate-y-1 hover:bg-secondary hover:text-primary hover:shadow-2xl material-symbols-outlined">
+
+        keyboard_arrow_up
+
+    </button>
+
+    <!-- External JavaScript file -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

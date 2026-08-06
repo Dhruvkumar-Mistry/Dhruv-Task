@@ -58,6 +58,7 @@
 
 <body>
 
+    <!-- ================= Header ================= -->
     <header class="fixed top-0 left-0 right-0 z-50">
 
         <!-- ================= HeadLine ================= -->
@@ -95,12 +96,12 @@
                 <div class="flex items-center justify-between xl:justify-around py-4">
 
                     <!-- Logo -->
-                    <img src="assets/logo.svg" alt="" class="hidden max-h-[80px] md:block">
-                    <img src="assets/Mlogo.svg" alt="" class="max-h-[40px] md:hidden">
-                    
+                    <img src="assets/icons/logo.svg" alt="" class="hidden max-h-[80px] md:block">
+                    <img src="assets/icons/Mlogo.svg" alt="" class="max-h-[40px] md:hidden">
+
                     <!-- Navigation -->
                     <ul class="hidden xl:flex gap-8 uppercase font-merriweathersans text-xs">
-                        
+
                         <li><a href="#" class="nav-link">Speisen & Getränke</a></li>
 
                         <!-- Dropdown -->
@@ -195,7 +196,7 @@
                     <!-- Top -->
                     <div class="flex justify-between items-center">
 
-                        <img src="assets/Mlogo.svg" class="max-h-[40px]" alt="">
+                        <img src="assets/icons/Mlogo.svg" class="max-h-[40px]" alt="">
 
                         <button id="closeMenu">
                             <span class="material-symbols-outlined text-4xl text-white">
@@ -306,7 +307,7 @@
         </nav>
     </header>
 
-    <!-- Main content -->
+    <!-- ================= Main Section ================= -->
     <main class="z-0 bg-white">
 
         <!-- ================= Hero ================= -->
@@ -314,8 +315,8 @@
 
             <!-- Background Video -->
             <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-                <source src="assets/Zur Kluse Bildwelten_Seedance 2.0 Reference_2026-05-05_15-46-35.mp4"
-                    type="video/mp4">
+                <source src="assets/videos/Zur Kluse Bildwelten_Seedance 2.0 Reference_2026-05-05_15-46-35.mp4"
+                    type="video/mp4" alt="hero video bg">
                 Your browser does not support the video tag.
             </video>
 
@@ -400,24 +401,25 @@
         <section class="grid grid-cols-1 lg:grid-cols-2">
 
             <!-- Card 1 -->
-            <div class="relative h-[225px] md:h-[512px] overflow-hidden">
+            <div class="relative h-[225px] md:h-[512px] overflow-hidden group">
 
                 <!-- Background Image -->
-                <img src="assets/SCHIRMBAR.png" alt="Schirmbar" class="w-full h-full object-cover">
+                <img src="assets/SCHIRMBAR.png" alt="Schirmbar"
+                    class="w-full h-full object-cover group-hover:scale-105 duration-500 transform-ease-in">
 
                 <!-- Dark Overlay -->
                 <div class="absolute inset-0 bg-black/40"></div>
 
                 <!-- Gradient Overlay -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-secondary/60 md:from-primary/90 to-secondary/10 md:to-primary/10">
+                    class="absolute inset-0 bg-gradient-to-t from-secondary/60  md:from-primary/90 to-secondary/10 md:to-primary/10">
                 </div>
 
                 <!-- Content -->
                 <div class="absolute inset-0 z-20 flex items-center justify-center">
-                    <p class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
+                    <h1 class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
                         SCHIRMBAR
-                    </p>
+                    </h1>
                 </div>
 
                 <!-- Button -->
@@ -439,14 +441,14 @@
 
                 <!-- Gradient Overlay -->
                 <div
-                    class="absolute inset-0 bg-gradient-to-t from-secondary/60 md:from-primary/90 to-secondary/10 md:to-primary/10">
+                    class="absolute inset-0 bg-gradient-to-t from-secondary/60 md:from-primary/90 to-secondary/10 md:to-primary/10 group-hover:from-secondary/90 group-hover:to-secondary/10 ">
                 </div>
 
                 <!-- Content -->
                 <div class="absolute inset-0 z-20 flex items-center justify-center">
-                    <p class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
+                    <h1 class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
                         EVENTS &amp; FEIERN
-                    </p>
+                    </h1>
                 </div>
 
                 <!-- Button -->
@@ -488,7 +490,7 @@
 
                         </div>
 
-                        <div class="flex-1">
+                        <div class="flex-1 flex flex-col w-full">
 
                             <h2
                                 class="font-merriweather text-2xl md:text-4xl lg:text-6xl text-primary leading-tight text-center md:text-start ">
@@ -520,8 +522,11 @@
                             </div>
 
                             <!-- Button -->
-                            <a href="#"
-                                class="inline-flex items-center justify-center gap-5 mt-5 md:mt-12 border border-primary rounded-full px-8 py-4 text-primary font-medium uppercase tracking-wide transition-all duration-300 hover:bg-primary hover:text-white group mx-auto md:mx-0">
+                            <a href="#" class="inline-flex w-fit items-center justify-center gap-5 mt-5 md:mt-12
+    border border-primary rounded-full px-8 py-4 text-primary font-medium
+    uppercase tracking-wide transition-all duration-300
+    hover:bg-primary hover:text-white group
+    mx-auto md:mx-0">
 
                                 Mehr erfahren
 
@@ -569,15 +574,15 @@
         </section>
 
         <!-- ================= SPEISEN & GETRÄNKE ================= -->
-        <section id="angebot" class="relative py-12 lg:py-24 overflow-hidden">
+        <section id="angebot" class="relative lg:py-24 overflow-hidden">
 
             <!-- Background Pattern -->
             <img src="assets/angebotBg.png" alt=""
                 class="hidden md:block absolute top-0 md:w-full max-h-[720px] z-0 pointer-events-none">
 
-            <div class="container mx-auto px-6 z-10">
+            <div class="container mx-auto lg:px-6 z-10">
 
-                <div class="grid lg:grid-cols-12 gap-7 lg:gap-16">
+                <div class="grid lg:grid-cols-12 lg:gap-16">
 
                     <!-- Left Image -->
                     <div class="lg:col-span-6 relative flex gap-10 justify-between order-2 lg:order-1">
@@ -600,16 +605,16 @@
                     </div>
 
                     <!-- Right Content -->
-                    <div class="lg:col-span-6 flex flex-col z-10 order-1 lg:order-2 ">
+                    <div class="lg:col-span-6  flex flex-col z-10 order-1 lg:order-2 ">
 
-                        <div class="max-w-md bg-primary ">
+                        <div class="lg:max-w-md py-12 px-5 bg-primary lg:bg-transparent text-center lg:text-left">
 
                             <h2
-                                class="font-merriweather tetx-2xl md:text-4xl lg:text-6xl text-white leading-tight mb-8 text-center md:text-left">
+                                class="font-merriweather font-light text-3xl md:text-4xl lg:text-6xl text-white leading-tight mb-8">
                                 Unser Angebot
                             </h2>
 
-                            <p class="text-white md:text-lg leading-9 mb-10">
+                            <p class=" md:max-w-lg  mx-auto text-white md:text-lg leading-9 mb-10">
                                 Genießen Sie täglich durchgehend warme Küche –
                                 ergänzt durch eine umfangreiche Weinkarte,
                                 ausgewählte Spirituosen und eine feine Whiskey-Auswahl.
@@ -627,10 +632,10 @@
                         </div>
 
                         <!-- Bottom Image -->
-                        <div class="mt-20 flex justify-center">
+                        <div class="lg:mt-20 flex justify-center">
 
                             <img src="assets/wine.jpg" alt="Wine"
-                                class="hidden lg:block w-[400px] h-[542px] lg:mr-10 object-cover">
+                                class="hidden lg:block w-[400px] h-[542px] xl:mr-10 object-cover">
 
                         </div>
 
@@ -645,14 +650,14 @@
         <!-- ================= Aktuelles ================= -->
         <section id="aktuelles" class="py-14 md:py-24 bg-white overflow-hidden">
 
-            <div class="container mx-auto px-5">
+            <div class="container mx-auto md:px-5">
 
                 <div class="grid lg:grid-cols-12 gap-y-12">
 
                     <!-- Left -->
                     <div class="lg:col-span-5">
 
-                        <div class="flex gap-10">
+                        <div class="flex  md:gap-10">
 
                             <!-- Vertical Label -->
                             <div class="hidden lg:flex flex-col items-center">
@@ -669,7 +674,7 @@
                             <div class="flex flex-col w-full">
 
                                 <h2
-                                    class="font-merriweather text-primary text-[40px] lg:text-6xl leading-tight text-center lg:text-left">
+                                    class="font-merriweather text-primary text-3xl md:text-[40px] lg:text-6xl leading-tight text-center lg:text-left">
                                     Immer up-to-date </h2>
 
                                 <p class="hidden lg:block mt-4 text-primary text-xl max-w-md">
@@ -702,43 +707,50 @@
 
                         <div class="grid md:grid-cols-2 gap-8">
 
-                            <!-- Card -->
+                            <!-- Card 1 -->
                             <article class="group">
 
-                                <div class="overflow-hidden">
+                                <!-- Mobile Layout -->
+                                <div class="flex gap-3 md:block">
 
-                                    <img src="assets/news.png" alt=""
-                                        class="w-full h-[210px] object-cover transition duration-700 group-hover:scale-105">
+                                    <!-- Image -->
+                                    <div class="w-1/2 md:w-full overflow-hidden flex-shrink-0">
 
-                                </div>
+                                        <img src="assets/news.png" alt=""
+                                            class="w-full h-48 md:h-[210px] object-cover transition duration-700 group-hover:scale-105">
 
-                                <div class="mt-8">
+                                    </div>
 
-                                    <h3 class="font-merriweather text-primary text-lg font-medium">
-                                        Biergarten-Saison eröffnet
-                                    </h3>
+                                    <!-- Content -->
+                                    <div class="w-1/2 md:w-full md:mt-8 flex flex-col pe-2">
 
-                                    <p class="mt-5 text-primary leading-normal text-sm font-merriweathersans">
-                                        Die warmen Tage sind zurück – genießen
-                                        Sie die ersten Sonnenstrahlen in unserem
-                                        Biergarten ...
-                                    </p>
+                                        <h3 class="font-merriweather text-primary  md:text-lg font-medium">
+                                            Biergarten-Saison eröffnet
+                                        </h3>
 
-                                    <div class="mt-10 flex justify-between items-center">
-
-                                        <p class="text-primary font-semibold ">
-                                            5. Mai 2026
+                                        <p
+                                            class="mt-4 md:mt-5 text-primary text-xs md:text-sm leading-normal font-merriweathersans">
+                                            Die warmen Tage sind zurück – genießen Sie die ersten
+                                            Sonnenstrahlen in unserem Biergarten ...
                                         </p>
 
-                                        <a href="#"
-                                            class="group/button flex justify-center items-center w-20 h-12 border border-primary rounded-full hover:bg-primary duration-300">
+                                        <div class="mt-auto pt-5 md:pt-10 flex items-center justify-between">
 
-                                            <span
-                                                class="text-3xl text-primary group-hover/button:text-white transition duration-300 material-symbols-outlined">
-                                                arrow_right_alt
-                                            </span>
+                                            <p class="text-primary font-semibold text-xs md:text-base">
+                                                5. Mai 2026
+                                            </p>
 
-                                        </a>
+                                            <a href="#"
+                                                class="group/button flex items-center justify-center w-20 h-10 md:w-20 md:h-12 border border-primary rounded-full hover:bg-primary duration-300">
+
+                                                <span
+                                                    class="material-symbols-outlined text-3xl text-primary group-hover/button:text-white transition duration-300">
+                                                    arrow_right_alt
+                                                </span>
+
+                                            </a>
+
+                                        </div>
 
                                     </div>
 
@@ -749,40 +761,46 @@
                             <!-- Card -->
                             <article class="group">
 
-                                <div class="overflow-hidden">
+                                <div class="flex gap-3 md:block">
 
-                                    <img src="assets/news.png" alt=""
-                                        class="w-full h-[210px] object-cover transition duration-700 group-hover:scale-105">
+                                    <!-- Image -->
+                                    <div class="w-1/2 md:w-full overflow-hidden flex-shrink-0">
 
-                                </div>
+                                        <img src="assets/news.png" alt=""
+                                            class="w-full h-48 md:h-[210px] object-cover transition duration-700 group-hover:scale-105">
 
-                                <div class="mt-8">
+                                    </div>
 
-                                    <h3 class="font-merriweather text-primary text-lg font-medium">
-                                        Biergarten-Saison eröffnet
-                                    </h3>
+                                    <!-- Content -->
+                                    <div class="w-1/2 md:w-full md:mt-8 flex flex-col pe-2">
 
-                                    <p class="mt-5 text-primary leading-normal text-sm font-light">
-                                        Die warmen Tage sind zurück – genießen
-                                        Sie die ersten Sonnenstrahlen in unserem
-                                        Biergarten ...
-                                    </p>
+                                        <h3 class="font-merriweather text-primary  md:text-lg font-medium">
+                                            Biergarten-Saison eröffnet
+                                        </h3>
 
-                                    <div class="mt-10 flex justify-between items-center">
-
-                                        <p class="text-primary font-semibold">
-                                            6. Mai 2026
+                                        <p
+                                            class="mt-4 md:mt-5 text-primary text-xs md:text-sm leading-normal font-merriweathersans">
+                                            Die warmen Tage sind zurück – genießen Sie die ersten
+                                            Sonnenstrahlen in unserem Biergarten ...
                                         </p>
 
-                                        <a href="#"
-                                            class="group/button flex justify-center items-center w-20 h-12 border border-primary rounded-full hover:bg-primary duration-300">
+                                        <div class="mt-auto pt-5 md:pt-10 flex items-center justify-between">
 
-                                            <span
-                                                class="text-3xl text-primary group-hover/button:text-white transition duration-300 material-symbols-outlined">
-                                                arrow_right_alt
-                                            </span>
+                                            <p class="text-primary font-semibold text-xs md:text-base">
+                                                5. Mai 2026
+                                            </p>
 
-                                        </a>
+                                            <a href="#"
+                                                class="group/button flex items-center justify-center w-20 h-10 md:w-20 md:h-12 border border-primary rounded-full hover:bg-primary duration-300">
+
+                                                <span
+                                                    class="material-symbols-outlined text-3xl text-primary group-hover/button:text-white transition duration-300">
+                                                    arrow_right_alt
+                                                </span>
+
+                                            </a>
+
+                                        </div>
 
                                     </div>
 
@@ -792,7 +810,7 @@
 
                             <!-- Button -->
                             <a href="#"
-                                class="md:hidden  group inline-block w-fit mx-auto items-center gap-5 border border-primary rounded-full px-8 py-4 mt-4 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
+                                class="md:hidden group flex w-fit mx-auto items-center gap-5 border border-primary rounded-full px-8 py-4 mt-4 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
 
                                 ZuallenNeuigkeiten
 
@@ -824,7 +842,7 @@
                     <source src="assets/videos/Zur Kluse Bildwelten_Kling 3_2026-03-05_13-43-15.mp4" type="video/mp4">
                 </video>
 
-                <div class="container mx-auto px-5 relative z-10 py-32 lg:py-40">
+                <div class="container mx-auto px-5 relative z-10 py-20 lg:py-40">
 
                     <div class="grid lg:grid-cols-12 gap-y-12">
 
@@ -848,7 +866,7 @@
                                 <!-- image -->
                                 <div class="flex items-center justify-center w-full">
 
-                                    <img src="assets/Union.svg" alt="" class=" object-cover">
+                                    <img src="assets/Union.svg" alt="" class="h-48 object-cover">
                                 </div>
 
                             </div>
@@ -860,15 +878,15 @@
 
                             <div class="text-center md:text-left">
 
-                                <h1 class="font-merriweather text-4xl lg:text-[68px] leading-tight text-white">Afterwork
+                                <h1 class="font-merriweather text-3xl md:text-4xl lg:text-[68px] leading-tight text-white">Afterwork
                                     klingt hier</h1>
                                 <img src="/assets/einfach-besser..svg" alt="einfach-besser"
-                                    class="-mt-2 md:-mt-6 pr-16 ">
+                                    class="-mt-2 md:-mt-6 md:pr-16 mx-auto md:mx-0">
                                 <p class="text-white my-6 font-light leading-7">
                                     Dein Feierabend hat endlich einen Sinn. Frische Luft, fette Beats und Feierlaune
                                     pur. Wir bringen euch zum Tanzen während der goldenen Stunden an der Kluse.
                                 </p>
-                                <p class="text-white font-light leading-7">Genießt euren Feierabend mit eiskalten
+                                <p class="text-white font-light leading-7 hidden md:block">Genießt euren Feierabend mit eiskalten
                                     Drinks, ausgewählten Lieblingsweinen, ganz
                                     chillig an unserem Klusee, oder auf der Tanzfläche.</p>
 
@@ -904,23 +922,23 @@
             </div>
 
             <!-- Bottom Section -->
-            <div class="container mx-auto px-5 -mt-24 relative z-20">
+            <div class="container mx-auto md:px-5 md:-mt-24 relative z-20">
 
                 <div class="grid lg:grid-cols-12 gap-10 items-end">
 
                     <!-- Left Image -->
                     <div class="hidden  lg:col-span-5 md:flex justify-center items-center">
-                        <img src="assets/event-left.jpg" alt="" class="w-[355px] h-[480px] object-cover">
+                        <img src="assets/event-left.jpg" alt="" class="w-[355px]  md:h-[480px] object-cover">
                     </div>
 
                     <!-- Right -->
                     <div class="lg:col-span-6">
 
                         <!-- Main Image -->
-                        <img src="/assets/event-right.jpg" alt="" class="w-full h-[420px] object-cover">
+                        <img src="/assets/event-right.jpg" alt="" class="w-full h-[260px] md:h-[420px] object-cover">
 
                         <!-- Pagination -->
-                        <div class="mt-5 flex gap-2">
+                        <div class="mt-5 flex gap-2 px-5">
 
                             <span class="w-20 h-[2px] bg-primary"></span>
                             <span class="w-20 h-[2px] bg-gray-300"></span>
@@ -929,12 +947,12 @@
 
                         </div>
 
-                        <p class="text-primary text-xs mt-2">
+                        <p class="text-primary text-xs mt-2 px-5">
                             01/04
                         </p>
 
                         <!-- Social -->
-                        <div class="mt-10 md:w-1/2 ml-auto">
+                        <div class="mt-10 md:w-1/2 ml-auto text-center lg:text-left">
 
                             <h2 class="font-merriweather text-primary text-5xl">
                                 Let's get social
@@ -1299,10 +1317,10 @@
                 <!-- Left -->
                 <div class="lg:col-span-6">
 
-                    <img src="assets/logo.svg" alt="Zur Kluse" class="w-40 mb-5 md:mb-10 hidden md:block">
-                    <img src="assets/Mlogo.svg" alt="Zur Kluse" class="w-40 mb-8 md:mb-10 mx-auto md:hidden">
+                    <img src="assets/icons/logo.svg" alt="Zur Kluse" class="w-40 mb-5 md:mb-10 hidden md:block">
+                    <img src="assets/icons/Mlogo.svg" alt="Zur Kluse" class="w-40 mb-8 md:mb-10 mx-auto md:hidden">
 
-                    <img src="assets/footer-heading.svg" alt="Ein Ort zum verweilen" class="mb-8 mx-auto md:mx-0">
+                    <img src="assets/icons/footer-heading.svg" alt="Ein Ort zum verweilen" class="mb-8 mx-auto md:mx-0">
 
                     <div class="hidden md:block md:max-w-md space-y-4 md:space-y-8 leading-8">
                         <p class="text-sm">
@@ -1426,7 +1444,8 @@
                 class="sm:mt-12 lg:mt-24 flex flex-col md:flex-row justify-between items-center pt-8 max-w-7xl mx-auto">
 
                 <p class="">
-                    © Zur Kluse 2026
+                    © Zur Kluse
+                    <script>document.write(new Date().getFullYear());</script>
                 </p>
 
                 <div class="flex gap-8 ">

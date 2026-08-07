@@ -96,8 +96,8 @@
                 <div class="flex items-center justify-between xl:justify-around py-4">
 
                     <!-- Logo -->
-                    <img src="assets/icons/logo.svg" alt="" class="hidden max-h-[80px] md:block">
-                    <img src="assets/icons/Mlogo.svg" alt="" class="max-h-[40px] md:hidden">
+                    <img src="assets/icons/logo.svg" alt="" class="hidden max-h-[80px] lg:block">
+                    <img src="assets/icons/Mlogo.svg" alt="" class="max-h-[40px] lg:hidden">
 
                     <!-- Navigation -->
                     <ul class="hidden xl:flex gap-8 uppercase font-merriweathersans text-xs">
@@ -537,29 +537,24 @@
 
                     </div>
 
-                    <!-- Right Image -->
-                    <div class="lg:col-span-5 ">
+                    <div class="lg:col-span-5">
 
                         <div class="overflow-hidden">
-
-                            <img src="assets/Standort.jpg" alt="Standort"
-                                class="w-full max-h-[425px] md:max-h-[500px] lg:max-h-[700px] object-cover transition duration-700 hover:scale-105">
-
+                            <img id="sliderImage" src="assets/Standort.jpg" alt="Standort"
+                                class="w-full max-h-[425px] md:max-h-[500px] lg:max-h-[700px] object-cover transition-all duration-700">
                         </div>
 
                         <!-- Pagination -->
                         <div class="mt-8">
 
-                            <div class="flex gap-2">
-
-                                <span class="w-20 h-[2px] bg-primary"></span>
-                                <span class="w-20 h-[2px] bg-gray-300"></span>
-                                <span class="w-20 h-[2px] bg-gray-300"></span>
-                                <span class="w-20 h-[2px] bg-gray-300"></span>
-
+                            <div id="pagination" class="flex gap-2">
+                                <span class="indicator w-20 h-[2px] bg-primary"></span>
+                                <span class="indicator w-20 h-[2px] bg-gray-300"></span>
+                                <span class="indicator w-20 h-[2px] bg-gray-300"></span>
+                                <span class="indicator w-20 h-[2px] bg-gray-300"></span>
                             </div>
 
-                            <p class="mt-3 text-sm text-primary font-medium">
+                            <p id="slideCount" class="mt-3 text-sm text-primary font-medium">
                                 01/04
                             </p>
 
@@ -635,7 +630,7 @@
                         <div class="lg:mt-20 flex justify-center">
 
                             <img src="assets/wine.jpg" alt="Wine"
-                                class="hidden lg:block w-[400px] h-[542px] xl:mr-10 object-cover">
+                                class="hidden lg:block w-[400px] h-[542px] 2xl:mr-10 object-cover">
 
                         </div>
 
@@ -866,7 +861,7 @@
                                 <!-- image -->
                                 <div class="flex items-center justify-center w-full">
 
-                                    <img src="assets/Union.svg" alt="" class="h-48 object-cover">
+                                    <img src="assets/Union.svg" alt="" class="h-48 md:h-auto object-cover">
                                 </div>
 
                             </div>
@@ -876,17 +871,20 @@
                         <!-- Right -->
                         <div class="lg:col-span-6">
 
-                            <div class="text-center md:text-left">
+                            <div class="text-center lg:text-left max-w-xl mx-auto">
 
-                                <h1 class="font-merriweather text-3xl md:text-4xl lg:text-[68px] leading-tight text-white">Afterwork
+                                <h1
+                                    class="font-merriweather text-3xl md:text-4xl lg:text-[68px] leading-tight text-white">
+                                    Afterwork
                                     klingt hier</h1>
                                 <img src="/assets/einfach-besser..svg" alt="einfach-besser"
-                                    class="-mt-2 md:-mt-6 md:pr-16 mx-auto md:mx-0">
+                                    class="-mt-2 md:-mt-6 lg:pr-16 mx-auto lg:mx-0 ">
                                 <p class="text-white my-6 font-light leading-7">
                                     Dein Feierabend hat endlich einen Sinn. Frische Luft, fette Beats und Feierlaune
                                     pur. Wir bringen euch zum Tanzen während der goldenen Stunden an der Kluse.
                                 </p>
-                                <p class="text-white font-light leading-7 hidden md:block">Genießt euren Feierabend mit eiskalten
+                                <p class="text-white font-light leading-7 hidden md:block">Genießt euren Feierabend mit
+                                    eiskalten
                                     Drinks, ausgewählten Lieblingsweinen, ganz
                                     chillig an unserem Klusee, oder auf der Tanzfläche.</p>
 
@@ -922,12 +920,12 @@
             </div>
 
             <!-- Bottom Section -->
-            <div class="container mx-auto md:px-5 md:-mt-24 relative z-20">
+            <div class="container mx-auto lg:px-5 lg:-mt-24 relative z-20">
 
                 <div class="grid lg:grid-cols-12 gap-10 items-end">
 
                     <!-- Left Image -->
-                    <div class="hidden  lg:col-span-5 md:flex justify-center items-center">
+                    <div class="hidden lg:col-span-5 lg:flex justify-center items-center">
                         <img src="assets/event-left.jpg" alt="" class="w-[355px]  md:h-[480px] object-cover">
                     </div>
 
@@ -935,24 +933,25 @@
                     <div class="lg:col-span-6">
 
                         <!-- Main Image -->
-                        <img src="/assets/event-right.jpg" alt="" class="w-full h-[260px] md:h-[420px] object-cover">
+                        <img id="socialSlider" src="/assets/event-right.jpg" alt=""
+                            class="w-full h-[260px] md:h-[420px] object-cover transition duration-500">
 
                         <!-- Pagination -->
                         <div class="mt-5 flex gap-2 px-5">
 
-                            <span class="w-20 h-[2px] bg-primary"></span>
-                            <span class="w-20 h-[2px] bg-gray-300"></span>
-                            <span class="w-20 h-[2px] bg-gray-300"></span>
-                            <span class="w-20 h-[2px] bg-gray-300"></span>
+                            <span class="slider-dot w-20 h-[2px] bg-primary"></span>
+                            <span class="slider-dot w-20 h-[2px] bg-gray-300"></span>
+                            <span class="slider-dot w-20 h-[2px] bg-gray-300"></span>
+                            <span class="slider-dot w-20 h-[2px] bg-gray-300"></span>
 
                         </div>
 
-                        <p class="text-primary text-xs mt-2 px-5">
+                        <p id="sliderNumber" class="text-primary text-xs mt-2 px-5">
                             01/04
                         </p>
 
                         <!-- Social -->
-                        <div class="mt-10 md:w-1/2 ml-auto text-center lg:text-left">
+                        <div class="mt-10 lg:w-1/2 ml-auto text-center lg:text-left">
 
                             <h2 class="font-merriweather text-primary text-5xl">
                                 Let's get social
@@ -990,7 +989,7 @@
         </section>
 
         <!-- ================= FAQ ================= -->
-        <section id="faq" class="relative overflow-hidden bg-[#F5F8F8] py-14 md:py-28 pb-56">
+        <section id="faq" class="relative overflow-hidden bg-[#F5F8F8] py-14 md:py-28 pb-24 lg:pb-56">
 
             <!-- Background Illustration -->
             <img src="assets/faqbg.png" alt=""
@@ -1016,7 +1015,7 @@
                     <div class="w-full lg:max-w-5xl mx-auto">
 
                         <h2
-                            class="font-merriweather text-primary text-3xl md:text-4xl lg:text-[40px] leading-tight mb-12 md:mb-20 text-center md:text-left">
+                            class="font-merriweather text-primary text-3xl md:text-4xl lg:text-[40px] leading-tight mb-6 lg:mb-12 md:mb-20 text-center lg:text-left">
                             Eure Fragen – <br class="md:hidden"> unsere Antworten
                         </h2>
 
@@ -1175,16 +1174,16 @@
         </section>
 
         <!-- ================= KARRIERE ================= -->
-        <section id="karriere" class="bg-white pb-24 w-full">
-            <img src="assets/karriereBg.png" alt="" class="z-0 absolute h-[650px] w-full mx-auto px-0 bg-primary ">
-            <div class="container pt-32 mx-auto px-5 relative top-0 z-10 h-full flex items-center">
+        <section id="karriere" class="bg-primary lg:bg-white lg:pb-24 w-full">
+            <img src="assets/karriereBg.png" alt="" class="z-0 absolute lg:h-[650px] w-full mx-auto px-0 bg-primary ">
+            <div class="container pt-16 lg:pt-32 mx-auto lg:px-5 relative top-0 z-10 h-full flex items-center">
 
                 <div class="grid lg:grid-cols-12 gap-10 items-start w-full">
 
                     <!-- Left -->
-                    <div class="lg:col-span-6">
+                    <div class="lg:col-span-6 order-2 lg:order-1">
 
-                        <div class="flex gap-10">
+                        <div class="flex gap-10 ">
 
                             <!-- Vertical Label -->
                             <div class="hidden lg:flex flex-col items-center">
@@ -1199,10 +1198,10 @@
                             </div>
 
                             <!-- Employee -->
-                            <div class="relative mx-auto">
+                            <div class="relative mx-auto w-full">
 
                                 <img src="assets/karriere-person.jpg" alt=""
-                                    class="w-full max-w-[570px] h-[800px] object-cover relative shadow-xl z-20">
+                                    class="w-full lg:max-w-[570px] h-[450px] md:h-[600px] lg:h-[800px] object-cover relative shadow-xl z-20">
 
                             </div>
 
@@ -1211,15 +1210,17 @@
                     </div>
 
                     <!-- Right -->
-                    <div class="lg:col-span-5 ml-auto">
+                    <div
+                        class="lg:col-span-5 lg:ml-auto order-1 lg:order-2 text-center lg:text-left justify-items-center items-center">
 
-                        <div class="max-w-md lg:ml-10">
+                        <div class="max-w-md lg:ml-10 ">
 
-                            <h2 class="font-merriweather font-light text-secondary text-[40px] leading-normal">
+                            <h2
+                                class="font-merriweather font-light text-secondary text-3xl md:text-[40px] leading-normal">
                                 Mehr als nur ein <br> Arbeitsplatz
                             </h2>
 
-                            <p class="mt-8 text-white leading-8 font-light max-w-2/3">
+                            <p class="mt-8 text-white leading-8 font-light max-w-fit hidden md:block">
                                 Ob neue Genussmomente auf der Karte
                                 oder besondere Erlebnisse vor Ort –
                                 hier erfahren Sie alles.
@@ -1227,7 +1228,7 @@
 
                             <!-- Button -->
                             <a href="#"
-                                class="inline-flex items-center gap-5 mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide text-white transition-all duration-300 hover:bg-white hover:text-primary group font-merriweathersans">
+                                class="inline-flex items-center gap-5 mt-5 md:mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide text-white transition-all duration-300 hover:bg-white hover:text-primary group font-merriweathersans">
 
                                 ZU DEN OFFENEN STELLEN
 
@@ -1249,8 +1250,8 @@
         </section>
 
         <!-- ================= ANFAHRT ================= -->
-        <section id="anfahrt" class="bg-white  md:py-20 relative ">
-            <div class="container mx-auto px-4 ">
+        <section id="anfahrt" class="bg-white pt-14 lg:py-20 relative overflow-hidden">
+            <div class="container mx-auto px-4 flex ">
 
                 <!-- vertical label -->
                 <div class="hidden lg:flex flex-col items-center">
@@ -1265,12 +1266,11 @@
                 </div>
 
                 <!-- Right Content -->
-                <div class="lg:ml-10 md:max-w-1/2 lg:max-w-1/3">
-                    <h1
-                        class="text-[32px] md:text-[40px] font-light text-primary fony-merriweather leading-9 text-center lg:text-left">
+                <div class="lg:ml-10 md:max-w-2/3 lg:max-w-1/3 text-center lg:text-left mx-auto lg:mx-0 ">
+                    <h1 class="text-[32px] md:text-[40px] font-light text-primary fony-merriweather leading-9 ">
                         Viele Wege <br> führen
                         Zur Kluse</h1>
-                    <p class="font-light mt-4 md:mt-10 text-center lg:text-left">Ob mit dem Auto oder den öffentlichen
+                    <p class="font-light mt-4 md:mt-10 ">Ob mit dem Auto oder den öffentlichen
                         Verkehrsmitteln – zur Kluse ist
                         bequem erreichbar. Sie finden uns in guter Lage.</p>
                     <div class="mt-12 space-y-5 hidden lg:block">
@@ -1287,7 +1287,7 @@
                     </div>
                     <!-- Button -->
                     <a href="#"
-                        class="inline-flex items-center gap-5 mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide transition-all duration-300 bg-secondary text-primary hover:bg-white hover:border-primary group font-merriweathersans">
+                        class="inline-flex items-center gap-5 mt-5 md:mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide transition-all duration-300 bg-secondary text-primary hover:bg-white hover:border-primary group font-merriweathersans">
 
                         ANFAHRT
                         <span
@@ -1301,7 +1301,7 @@
                 </div>
             </div>
             <img src="assets/map.png" alt=""
-                class="absolute right-0 bottom-0 h-full w-auto object-contain z-0 opacity-90 pointer-events-none">
+                class="lg:absolute right-0 bottom-0 h-[550px] lg:h-full scale-110 lg:h-full  lg:w-auto object-cover z-0  pointer-events-none">
 
         </section>
     </main>

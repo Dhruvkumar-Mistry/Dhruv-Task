@@ -1,44 +1,3 @@
-// async function loadComponent(id, file) {
-//     const response = await fetch(file);
-//     const html = await response.text();
-//     document.getElementById(id).innerHTML = html;
-// }
-
-// loadComponent("navbar", "components/navbar.html");
-// loadComponent("hero", "components/hero.html");
-// loadComponent("about", "components/about.html");
-// loadComponent("services", "components/services.html");
-// loadComponent("footer", "components/footer.html");
-
-// const faqButtons = document.querySelectorAll(".faq-btn");
-
-// faqButtons.forEach(button => {
-
-//     button.addEventListener("click", () => {
-
-//         const content = button.nextElementSibling;
-//         const icon = button.querySelector(".faq-icon");
-
-//         document.querySelectorAll(".faq-content").forEach(item => {
-//             if (item !== content) {
-//                 item.classList.add("hidden");
-//             }
-//         });
-
-//         document.querySelectorAll(".faq-icon").forEach(i => {
-//             if (i !== icon) i.textContent = "+";
-//         });
-
-//         content.classList.toggle("hidden");
-
-//         icon.textContent = content.classList.contains("hidden")
-//             ? "+"
-//             : "×";
-
-//     });
-
-// });
-
 
 // ================= FAQ =================
 const faqItems = document.querySelectorAll(".faq-item");
@@ -173,3 +132,92 @@ document.querySelectorAll(".submenu-btn").forEach(btn => {
     });
 
 });
+
+const images = [
+    "assets/Standort.jpg",
+    "assets/Standort.jpg",
+    "assets/Standort.jpg",
+    "assets/Standort.jpg"
+];
+
+const image = document.getElementById("sliderImage");
+const indicators = document.querySelectorAll(".indicator");
+const count = document.getElementById("slideCount");
+
+let current = 0;
+
+function updateSlider() {
+
+    image.classList.add("opacity-0");
+
+    setTimeout(() => {
+
+        image.src = images[current];
+
+        image.classList.remove("opacity-0");
+
+    }, 500);
+
+    indicators.forEach((item, index) => {
+        item.classList.toggle("bg-primary", index === current);
+        item.classList.toggle("bg-gray-300", index !== current);
+    });
+
+    count.textContent =
+        `${String(current + 1).padStart(2, "0")}/${String(images.length).padStart(2, "0")}`;
+}
+
+setInterval(() => {
+    current = (current + 1) % images.length;
+    updateSlider();
+}, 3000);
+
+updateSlider();
+
+
+const images = [
+    "/assets/event-right.jpg",
+    "/assets/event-right-2.jpg",
+    "/assets/event-right-3.jpg",
+    "/assets/event-right-4.jpg",
+];
+
+const slider = document.getElementById("socialSlider");
+const dots = document.querySelectorAll(".slider-dot");
+const number = document.getElementById("sliderNumber");
+
+let current = 0;
+
+function updateSlider() {
+
+    slider.classList.add("opacity-0");
+
+    setTimeout(() => {
+
+        slider.src = images[current];
+
+        slider.classList.remove("opacity-0");
+
+    }, 250);
+
+    dots.forEach((dot, index) => {
+
+        dot.classList.toggle("bg-primary", index === current);
+        dot.classList.toggle("bg-gray-300", index !== current);
+
+    });
+
+    number.textContent =
+        `${String(current + 1).padStart(2, "0")}/${String(images.length).padStart(2, "0")}`;
+
+}
+
+updateSlider();
+
+setInterval(() => {
+
+    current = (current + 1) % images.length;
+
+    updateSlider();
+
+}, 3000);

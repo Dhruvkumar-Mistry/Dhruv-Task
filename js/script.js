@@ -156,7 +156,7 @@ function updateSlider() {
 
         image.classList.remove("opacity-0");
 
-    }, 500);
+    }, 300);
 
     indicators.forEach((item, index) => {
         item.classList.toggle("bg-primary", index === current);
@@ -173,51 +173,3 @@ setInterval(() => {
 }, 3000);
 
 updateSlider();
-
-
-const images = [
-    "/assets/event-right.jpg",
-    "/assets/event-right-2.jpg",
-    "/assets/event-right-3.jpg",
-    "/assets/event-right-4.jpg",
-];
-
-const slider = document.getElementById("socialSlider");
-const dots = document.querySelectorAll(".slider-dot");
-const number = document.getElementById("sliderNumber");
-
-let current = 0;
-
-function updateSlider() {
-
-    slider.classList.add("opacity-0");
-
-    setTimeout(() => {
-
-        slider.src = images[current];
-
-        slider.classList.remove("opacity-0");
-
-    }, 250);
-
-    dots.forEach((dot, index) => {
-
-        dot.classList.toggle("bg-primary", index === current);
-        dot.classList.toggle("bg-gray-300", index !== current);
-
-    });
-
-    number.textContent =
-        `${String(current + 1).padStart(2, "0")}/${String(images.length).padStart(2, "0")}`;
-
-}
-
-updateSlider();
-
-setInterval(() => {
-
-    current = (current + 1) % images.length;
-
-    updateSlider();
-
-}, 3000);

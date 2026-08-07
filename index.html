@@ -27,33 +27,16 @@
 
     <!-- Tailwind CSS CDN - v4.0.0 -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'merriweathersans': ['Merriweather Sans', 'sans-serif'],
-                        'merriweather': ['Merriweather', 'serif'],
-                    },
-                    colors: {
-                        'primary': '#00413C',
-                        'secondary': '#F0B973',
-                    },
-                },
-            },
-        }
-    </script>
+    <!-- Custom Tailwind Theme -->
     <style type="text/tailwindcss">
         @theme {
-  --font-merriweather: "Merriweather", serif;
-  --font-merriweathersans: "Merriweather Sans", sans-serif;
+            --color-primary: #00413C;
+            --color-secondary: #F0B973;
 
-  --color-primary: #00413C;
-  --color-secondary: #F0B973;
-    --color-tertiary: #FC393C;
-
-}
-</style>
+            --font-merriweather: "Merriweather", serif;
+            --font-merriweathersans: "Merriweather Sans", sans-serif;
+        }
+    </style>
 </head>
 
 <body>
@@ -277,7 +260,7 @@
                     </ul>
 
                     <!-- Bottom -->
-                    <div class="mt-auto w-full">
+                    <div class="mt-auto w-full mb-8">
 
                         <div class="flex w-full justify-between items-center">
 
@@ -294,7 +277,15 @@
                                 Impressum | Datenschutz
                             </p>
 
-                            <img src="assets/instagram.svg" class="w-6">
+                            <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                                <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="instagram-icon">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
 
                         </div>
 
@@ -311,7 +302,7 @@
     <main class="z-0 bg-white">
 
         <!-- ================= Hero ================= -->
-        <section id="hero" class="relative h-screen overflow-hidden">
+        <section id="hero" class="relative h-screen overflow-hidden min-h-[600px]">
 
             <!-- Background Video -->
             <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
@@ -352,7 +343,7 @@
                         </p>
 
                         <!-- Opening Hours -->
-                        <div class="mt-10 text-secondary hidden md:block">
+                        <div class="mt-5 sm:mt-10 text-secondary hidden md:block">
 
                             <h3 class="font-merriweather text-2xl md:text-4xl">
                                 Heute geöffnet | 12:00–22:00 Uhr
@@ -827,7 +818,7 @@
         </section>
 
         <!-- ================= KLUSE EVENTS ================= -->
-        <section id="kluse-events" class="bg-white pb-14 md:pb-24">
+        <section id="kluse-events" class="bg-white pb-14 md:pb-24 overflow-hidden">
 
             <div class="relative overflow-hidden bg-primary">
 
@@ -934,7 +925,7 @@
 
                         <!-- Main Image -->
                         <img id="socialSlider" src="/assets/event-right.jpg" alt=""
-                            class="w-full h-[260px] md:h-[420px] object-cover transition duration-500">
+                            class="w-full h-[220px] sm:h-[280px] md:h-[360px] lg:h-[420px] object-cover transition-all duration-500" />
 
                         <!-- Pagination -->
                         <div class="mt-5 flex gap-2 px-5">
@@ -1413,7 +1404,7 @@
                         <!-- Sitemap -->
                         <div class="hidden">
 
-                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-2">
+                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-6 md:mb-2">
                                 Sitemap
                             </h3>
 
@@ -1443,21 +1434,33 @@
             <div
                 class="sm:mt-12 lg:mt-24 flex flex-col md:flex-row justify-between items-center pt-8 max-w-7xl mx-auto">
 
-                <p class="">
-                    © Zur Kluse
-                    <script>document.write(new Date().getFullYear());</script>
-                </p>
+                <a class="md:hidden mb-4" href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="instagram-icon">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <div class="flex flex-col-reverse gap-y-1 items-center md:flex-row justify-between w-full font-light">
 
-                <div class="flex gap-8 ">
+                    <p class="text-xs md:text-base ">
+                        © Zur Kluse
+                        <script>document.write(new Date().getFullYear());</script>
+                    </p>
 
-                    <a href="#" class="hover:text-secondary transition">
-                        Impressum
-                    </a>
+                    <div class="flex gap-1.5 ">
 
-                    <a href="#" class="hover:text-secondary transition">
-                        Datenschutz
-                    </a>
+                        <a href="#" class="hover:text-secondary transition">
+                            Impressum
+                        </a>
+                        |
+                        <a href="#" class="hover:text-secondary transition">
+                            Datenschutz
+                        </a>
 
+                    </div>
                 </div>
 
             </div>

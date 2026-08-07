@@ -14,6 +14,9 @@
     <!-- External CSS stylesheet -->
     <link rel="stylesheet" href="/css/style.css">
 
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +35,8 @@
         @theme {
             --color-primary: #00413C;
             --color-secondary: #F0B973;
+            --color-tertiary: #FC393C;
+
 
             --font-merriweather: "Merriweather", serif;
             --font-merriweathersans: "Merriweather Sans", sans-serif;
@@ -40,6 +45,17 @@
 </head>
 
 <body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out',
+            delay: 100
+        });
+    </script>
 
     <!-- ================= Header ================= -->
     <header class="fixed top-0 left-0 right-0 z-50">
@@ -59,8 +75,8 @@
             </span>
             <span class="hidden md:block"> | Zur Kluse · An d. Kluse 27b · 45133 Essen |
             </span>
-            <span class="hidden md:block">
-                Telefon: +40 201 441 717 |
+            <span class="hidden md:flex items-center gap-1">
+                <span class="material-symbols-outlined text-[1px]">call</span>+40 201 441 717 |
             </span>
             <span class="flex items-center gap-2 text-secondary">
                 <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
@@ -71,7 +87,7 @@
         </div>
 
         <!-- ================= Navbar ================= -->
-        <nav id="navbar"
+        <nav data-aos="fade-down" id="navbar"
             class="fixed top-6 left-0 w-full z-50 bg-transparent transition-all duration-300 drop-shadow-xl">
 
             <div class="container mx-auto px-5 lg:px-10">
@@ -325,7 +341,7 @@
                     <div class="flex flex-col h-full justify-end text-center pb-20">
 
                         <!-- Main Heading -->
-                        <div>
+                        <div data-aos="fade-up">
 
                             <h1
                                 class="font-merriweather text-white text-5xl md:text-7xl lg:text-[78px] leading-none font-light">
@@ -338,12 +354,14 @@
                         </div>
 
                         <!-- Categories -->
-                        <p class="mt-14 font-merriweather uppercase tracking-[3px] text-white text-xl md:text-3xl">
+                        <p data-aos="fade-up" data-aos-delay="200"
+                            class="mt-14 font-merriweather uppercase tracking-[3px] text-white text-xl md:text-3xl">
                             CAFÉ • RESTAURANT • BIERGARTEN • SCHIRMBAR
                         </p>
 
                         <!-- Opening Hours -->
-                        <div class="mt-5 sm:mt-10 text-secondary hidden md:block">
+                        <div data-aos="fade-up" data-aos-delay="400"
+                            class="mt-5 sm:mt-10 text-secondary hidden md:block">
 
                             <h3 class="font-merriweather text-2xl md:text-4xl">
                                 Heute geöffnet | 12:00–22:00 Uhr
@@ -362,7 +380,8 @@
             </div>
 
             <!-- sidebar -->
-            <div class="hidden xl:flex absolute top-1/2 right-6 -translate-y-1/2  flex-col gap-4 z-50">
+            <div data-aos="fade-left" data-aos-delay="600" id="sidebar"
+                class="hidden xl:flex absolute top-1/2 right-6 -translate-y-1/2  flex-col gap-4 z-50">
 
                 <button
                     class="w-14 h-14 rounded-full border border-secondary text-secondary flex items-center justify-center hover:bg-secondary hover:text-primary transition">
@@ -407,14 +426,15 @@
                 </div>
 
                 <!-- Content -->
-                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="absolute inset-0 z-20 flex items-center justify-center">
                     <h1 class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
                         SCHIRMBAR
                     </h1>
                 </div>
 
                 <!-- Button -->
-                <button
+                <button data-aos="fade-up" data-aos-delay="500"
                     class="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 border border-white rounded-full w-20 h-10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition material-symbols-outlined">
                     arrow_right_alt
                 </button>
@@ -436,14 +456,15 @@
                 </div>
 
                 <!-- Content -->
-                <div class="absolute inset-0 z-20 flex items-center justify-center">
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="absolute inset-0 z-20 flex items-center justify-center">
                     <h1 class="font-merriweather text-2xl md:text-3xl font-medium tracking-wide uppercase text-white">
                         EVENTS &amp; FEIERN
                     </h1>
                 </div>
 
                 <!-- Button -->
-                <button
+                <button data-aos="fade-up" data-aos-delay="500"
                     class="absolute bottom-10 left-1/2 z-20 -translate-x-1/2 border border-white rounded-full w-20 h-10 flex items-center justify-center text-white hover:bg-white hover:text-primary transition material-symbols-outlined">
                     arrow_right_alt
 
@@ -458,7 +479,7 @@
 
             <!-- Background Number -->
             <h1
-                class="hidden md:block absolute -top-20 left-1/2 -translate-x-[65%] text-[400px] lg:text-[983px] font-bold text-gray-200/40 select-none pointer-events-none leading-none font-merriweather">
+                class="hidden md:block absolute -top-20 left-1/2 -translate-x-[66%] text-[400px] lg:text-[540px] 2xl:text-[670px] font-bold text-gray-200/40 select-none pointer-events-none leading-none font-merriweather">
                 1785
             </h1>
 
@@ -483,7 +504,7 @@
 
                         <div class="flex-1 flex flex-col w-full">
 
-                            <h2
+                            <h2 data-aos="fade-right"
                                 class="font-merriweather text-2xl md:text-4xl lg:text-6xl text-primary leading-tight text-center md:text-start ">
                                 Die Erlebnisgastronomie <br>
                                 in Essen-Bredeney
@@ -491,7 +512,7 @@
 
                             <div class="mt-6 md:mt-10 space-y-8 max-w-xl text-center md:text-left">
 
-                                <p class="text-gray-700 leading-8">
+                                <p data-aos="fade-right" data-aos-delay="100" class="text-gray-700 leading-8">
                                     Das Restaurant „Zur Kluse“ befindet sich im Süden von Essen,
                                     zwischen Bredeney und Stadtwald, direkt am Waldrand. <span
                                         class="hidden md:inline">Passend
@@ -501,7 +522,8 @@
                                         Abstecher einlädt.</span>
                                 </p>
 
-                                <p class="text-gray-700 leading-8 hidden md:block">
+                                <p data-aos="fade-right" data-aos-delay="200"
+                                    class="text-gray-700 leading-8 hidden md:block">
                                     Umgeben von Natur bietet dieser besondere Standort die
                                     perfekte Kulisse, um dem Alltag zu entfliehen und in
                                     entspannter Atmosphäre anzukommen. Ob kurzer Abstecher oder
@@ -513,7 +535,7 @@
                             </div>
 
                             <!-- Button -->
-                            <a href="#" class="inline-flex w-fit items-center justify-center gap-5 mt-5 md:mt-12
+                            <a data-aos="fade-right" data-aos-delay="300" href="#" class="inline-flex w-fit items-center justify-center gap-5 mt-5 md:mt-12
     border border-primary rounded-full px-8 py-4 text-primary font-medium
     uppercase tracking-wide transition-all duration-300
     hover:bg-primary hover:text-white group
@@ -528,7 +550,7 @@
 
                     </div>
 
-                    <div class="lg:col-span-5">
+                    <div data-aos="fade" class="lg:col-span-5">
 
                         <div class="overflow-hidden">
                             <img id="sliderImage" src="assets/Standort.jpg" alt="Standort"
@@ -563,7 +585,7 @@
         <section id="angebot" class="relative lg:py-24 overflow-hidden">
 
             <!-- Background Pattern -->
-            <img src="assets/angebotBg.png" alt=""
+            <img data-aos="fade" src="assets/angebotBg.png" alt=""
                 class="hidden md:block absolute top-0 md:w-full max-h-[720px] z-0 pointer-events-none">
 
             <div class="container mx-auto lg:px-6 z-10">
@@ -585,7 +607,7 @@
 
                         </div>
 
-                        <img src="assets/Food1.png" alt="Food"
+                        <img data-aos="fade-up" src="assets/Food1.png" alt="Food"
                             class="w-full lg:w-[577px] h-[432px] md:h-[825px] object-cover">
 
                     </div>
@@ -595,18 +617,19 @@
 
                         <div class="lg:max-w-md py-12 px-5 bg-primary lg:bg-transparent text-center lg:text-left">
 
-                            <h2
+                            <h2 data-aos="fade-up" data-aos-delay="100"
                                 class="font-merriweather font-light text-3xl md:text-4xl lg:text-6xl text-white leading-tight mb-8">
                                 Unser Angebot
                             </h2>
 
-                            <p class=" md:max-w-lg  mx-auto text-white md:text-lg leading-9 mb-10">
+                            <p data-aos="fade-up" data-aos-delay="200"
+                                class=" md:max-w-lg  mx-auto text-white md:text-lg leading-9 mb-10">
                                 Genießen Sie täglich durchgehend warme Küche –
                                 ergänzt durch eine umfangreiche Weinkarte,
                                 ausgewählte Spirituosen und eine feine Whiskey-Auswahl.
                             </p>
 
-                            <a href="#"
+                            <a data-aos="fade-up" data-aos-delay="300" href="#"
                                 class="inline-flex items-center gap-6 rounded-full bg-secondary px-8 py-4 text-primary uppercase font-semibold transition duration-300 hover:bg-primary hover:text-secondary border">
 
                                 Speisen & Getränke
@@ -618,7 +641,7 @@
                         </div>
 
                         <!-- Bottom Image -->
-                        <div class="lg:mt-20 flex justify-center">
+                        <div data-aos="fade-up" data-aos-delay="400" class="lg:mt-20 flex justify-center">
 
                             <img src="assets/wine.jpg" alt="Wine"
                                 class="hidden lg:block w-[400px] h-[542px] 2xl:mr-10 object-cover">
@@ -659,18 +682,19 @@
 
                             <div class="flex flex-col w-full">
 
-                                <h2
+                                <h2 data-aos="fade-right" data-aos-delay="100"
                                     class="font-merriweather text-primary text-3xl md:text-[40px] lg:text-6xl leading-tight text-center lg:text-left">
                                     Immer up-to-date </h2>
 
-                                <p class="hidden lg:block mt-4 text-primary text-xl max-w-md">
+                                <p data-aos="fade-right" data-aos-delay="200"
+                                    class="hidden lg:block mt-4 text-primary text-xl max-w-md">
                                     Ob neue Genussmomente auf der Karte oder
                                     besondere Erlebnisse vor Ort –
                                     hier erfahren Sie alles.
                                 </p>
 
                                 <!-- Button -->
-                                <a href="#"
+                                <a data-aos="fade-right" data-aos-delay="300" href="#"
                                     class="hidden lg:flex group w-fit lg:inline-flex items-center gap-5 border border-primary rounded-full px-8 py-4 mt-8 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
 
                                     ZuallenNeuigkeiten
@@ -694,7 +718,7 @@
                         <div class="grid md:grid-cols-2 gap-8">
 
                             <!-- Card 1 -->
-                            <article class="group">
+                            <article data-aos="fade-up" data-aos-delay="100" class="group">
 
                                 <!-- Mobile Layout -->
                                 <div class="flex gap-3 md:block">
@@ -745,7 +769,7 @@
                             </article>
 
                             <!-- Card -->
-                            <article class="group">
+                            <article data-aos="fade-up" data-aos-delay="200" class="group">
 
                                 <div class="flex gap-3 md:block">
 
@@ -795,7 +819,7 @@
                             </article>
 
                             <!-- Button -->
-                            <a href="#"
+                            <a data-aos="fade-up" data-aos-delay="300" href="#"
                                 class="md:hidden group flex w-fit mx-auto items-center gap-5 border border-primary rounded-full px-8 py-4 mt-4 uppercase text-sm font-semibold hover:bg-primary hover:text-white duration-300">
 
                                 ZuallenNeuigkeiten
@@ -852,7 +876,8 @@
                                 <!-- image -->
                                 <div class="flex items-center justify-center w-full">
 
-                                    <img src="assets/Union.svg" alt="" class="h-48 md:h-auto object-cover">
+                                    <img data-aos="zoom-in" src="assets/Union.svg" alt=""
+                                        class="h-48 md:h-auto object-cover">
                                 </div>
 
                             </div>
@@ -860,35 +885,36 @@
                         </div>
 
                         <!-- Right -->
-                        <div class="lg:col-span-6">
+                        <div class="lg:col-span-7">
 
-                            <div class="text-center lg:text-left max-w-xl mx-auto">
+                            <div class="text-center lg:text-left max-w-xl lg:max-w-3xl mx-auto lg:mx-0">
 
-                                <h1
+                                <h1 data-aos="fade-up" data-aos-delay="100"
                                     class="font-merriweather text-3xl md:text-4xl lg:text-[68px] leading-tight text-white">
-                                    Afterwork
-                                    klingt hier</h1>
-                                <img src="/assets/einfach-besser..svg" alt="einfach-besser"
+                                    Afterwork klingt hier</h1>
+                                <img data-aos="fade-up" data-aos-delay="200" src="/assets/einfach-besser..svg" alt="einfach-besser"
                                     class="-mt-2 md:-mt-6 lg:pr-16 mx-auto lg:mx-0 ">
-                                <p class="text-white my-6 font-light leading-7">
+                                <p data-aos="fade-up" data-aos-delay="300" class="text-white my-6 font-light leading-7">
                                     Dein Feierabend hat endlich einen Sinn. Frische Luft, fette Beats und Feierlaune
                                     pur. Wir bringen euch zum Tanzen während der goldenen Stunden an der Kluse.
                                 </p>
-                                <p class="text-white font-light leading-7 hidden md:block">Genießt euren Feierabend mit
+                                <p data-aos="fade-up" data-aos-delay="400" class="text-white font-light leading-7 hidden md:block">Genießt euren Feierabend mit
                                     eiskalten
                                     Drinks, ausgewählten Lieblingsweinen, ganz
                                     chillig an unserem Klusee, oder auf der Tanzfläche.</p>
 
                                 <!-- New Event -->
-                                <div class="mt-10 space-y-2">
+                                <div data-aos="fade-up" data-aos-delay="500" class="mt-10 space-y-2">
                                     <h2 class="font-medium font-merriweather text-secondary">Nächste Veranstaltung:</h2>
                                     <h2 class="font-medium font-merriweather text-3xl text-white">17, Juni 2026</h2>
                                 </div>
 
 
                                 <!-- Button -->
-                                <a href="#"
-                                    class="inline-flex items-center gap-5 mt-12 bg-tertiary rounded-full px-8 py-4 text-white font-medium uppercase tracking-wide transition-all duration-300 hover:bg-white hover:text-tertiary group">
+                                <a 
+                                data-aos="fade-up" data-aos-delay="600"
+                                href="#"
+                                    class="inline-flex items-center gap-5 mt-12 bg-tertiary rounded-full px-8 py-4 text-white font-medium uppercase tracking-wide transition-all duration-300 hover:bg-transparent border border-tertiary hover:text-tertiary hover:border-tertiary group">
 
                                     Mehr erfahren
 
@@ -916,12 +942,12 @@
                 <div class="grid lg:grid-cols-12 gap-10 items-end">
 
                     <!-- Left Image -->
-                    <div class="hidden lg:col-span-5 lg:flex justify-center items-center">
+                    <div data-aos="fade-up" data-aos-delay="100" class="hidden lg:col-span-5 lg:flex justify-center items-center">
                         <img src="assets/event-left.jpg" alt="" class="w-[355px]  md:h-[480px] object-cover">
                     </div>
 
                     <!-- Right -->
-                    <div class="lg:col-span-6">
+                    <div data-aos="fade-up" data-aos-delay="200" class="lg:col-span-6">
 
                         <!-- Main Image -->
                         <img id="socialSlider" src="/assets/event-right.jpg" alt=""
@@ -944,16 +970,16 @@
                         <!-- Social -->
                         <div class="mt-10 lg:w-1/2 ml-auto text-center lg:text-left">
 
-                            <h2 class="font-merriweather text-primary text-5xl">
+                            <h2 data-aos="fade-up" data-aos-delay="300" class="font-merriweather text-primary text-5xl">
                                 Let's get social
                             </h2>
 
-                            <p class="text-primary mt-4 leading-8">
+                            <p data-aos="fade-up" data-aos-delay="400" class="text-primary mt-4 leading-8">
                                 Für mehr Afterglow <br>
                                 folgt uns auf Instagram.
                             </p>
 
-                            <a href="#"
+                            <a data-aos="fade-up" data-aos-delay="500" href="#"
                                 class="inline-flex items-center gap-3 border border-primary rounded-full px-6 py-3 mt-8 hover:bg-primary hover:text-white transition duration-300 group">
 
                                 <img src="assets/insta.svg" class="w-5">
@@ -1005,13 +1031,13 @@
                     <!-- Content -->
                     <div class="w-full lg:max-w-5xl mx-auto">
 
-                        <h2
+                        <h2 data-aos="fade-up"
                             class="font-merriweather text-primary text-3xl md:text-4xl lg:text-[40px] leading-tight mb-6 lg:mb-12 md:mb-20 text-center lg:text-left">
                             Eure Fragen – <br class="md:hidden"> unsere Antworten
                         </h2>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="100" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1037,7 +1063,7 @@
                         </div>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="200" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1061,7 +1087,7 @@
                         </div>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="300" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1085,7 +1111,7 @@
                         </div>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="400" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1109,7 +1135,7 @@
                         </div>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="500" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1133,7 +1159,7 @@
                         </div>
 
                         <!-- Item -->
-                        <div class="faq-item border-b border-primary/40 py-3 md:py-6">
+                        <div data-aos="fade-down" data-aos-delay="600" class="faq-item border-b border-primary/40 py-3 md:py-6">
 
                             <button class="faq-btn flex justify-between items-center w-full text-left">
 
@@ -1189,10 +1215,10 @@
                             </div>
 
                             <!-- Employee -->
-                            <div class="relative mx-auto w-full">
+                            <div data-aos="fade-up" class="relative mx-auto w-full">
 
-                                <img src="assets/karriere-person.jpg" alt=""
-                                    class="w-full lg:max-w-[570px] h-[450px] md:h-[600px] lg:h-[800px] object-cover relative shadow-xl z-20">
+                                <img  src="assets/karriere-person.jpg" alt=""
+                                    class="w-full mx-auto lg:max-w-[570px] h-[450px] md:h-[600px] lg:h-[800px] object-cover relative shadow-xl z-20">
 
                             </div>
 
@@ -1202,23 +1228,23 @@
 
                     <!-- Right -->
                     <div
-                        class="lg:col-span-5 lg:ml-auto order-1 lg:order-2 text-center lg:text-left justify-items-center items-center">
+                        class="lg:col-span-5 order-1 lg:order-2 text-center lg:text-left justify-items-center lg:justify-items-start">
 
-                        <div class="max-w-md lg:ml-10 ">
+                        <div class="max-w-md lg:ml-10 2xl:ml-0">
 
-                            <h2
+                            <h2 data-aos="fade-up" data-aos-delay="200"
                                 class="font-merriweather font-light text-secondary text-3xl md:text-[40px] leading-normal">
                                 Mehr als nur ein <br> Arbeitsplatz
                             </h2>
 
-                            <p class="mt-8 text-white leading-8 font-light max-w-fit hidden md:block">
+                            <p data-aos="fade-up" data-aos-delay="300" class="mt-8 text-white leading-8 font-light max-w-fit hidden md:block">
                                 Ob neue Genussmomente auf der Karte
                                 oder besondere Erlebnisse vor Ort –
                                 hier erfahren Sie alles.
                             </p>
 
                             <!-- Button -->
-                            <a href="#"
+                            <a data-aos="fade-up" data-aos-delay="400" href="#"
                                 class="inline-flex items-center gap-5 mt-5 md:mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide text-white transition-all duration-300 hover:bg-white hover:text-primary group font-merriweathersans">
 
                                 ZU DEN OFFENEN STELLEN
@@ -1241,7 +1267,7 @@
         </section>
 
         <!-- ================= ANFAHRT ================= -->
-        <section id="anfahrt" class="bg-white pt-14 lg:py-20 relative overflow-hidden">
+        <section id="anfahrt" class="bg-white pt-14 lg:py-20 relative overflow-hidden container mx-auto">
             <div class="container mx-auto px-4 flex ">
 
                 <!-- vertical label -->
@@ -1258,26 +1284,26 @@
 
                 <!-- Right Content -->
                 <div class="lg:ml-10 md:max-w-2/3 lg:max-w-1/3 text-center lg:text-left mx-auto lg:mx-0 ">
-                    <h1 class="text-[32px] md:text-[40px] font-light text-primary fony-merriweather leading-9 ">
+                    <h1 data-aos="fade-up" data-aos-delay="200" class="text-[32px] md:text-[40px] font-light text-primary fony-merriweather leading-9 ">
                         Viele Wege <br> führen
                         Zur Kluse</h1>
-                    <p class="font-light mt-4 md:mt-10 ">Ob mit dem Auto oder den öffentlichen
+                    <p data-aos="fade-up" data-aos-delay="300" class="font-light mt-4 md:mt-10 ">Ob mit dem Auto oder den öffentlichen
                         Verkehrsmitteln – zur Kluse ist
                         bequem erreichbar. Sie finden uns in guter Lage.</p>
                     <div class="mt-12 space-y-5 hidden lg:block">
-                        <h1><b>Kontakt</b><br>
+                        <h1 data-aos="fade-up" data-aos-delay="400"><b>Kontakt</b><br>
                             An d. Kluse 27b, 45133 Essen <br>
                             Tel.: 0201 441717 <br>
                             Mail: info@zurkluse.de</h1>
 
-                        <h1><b>Öffnungszeiten</b><br>
+                        <h1 data-aos="fade-up" data-aos-delay="500" ><b>Öffnungszeiten</b><br>
 
                             Dienstag – Samstag | 12:00 – 22:00 Uhr <br>
                             Sonntag | 12:00 – 21:00 Uhr <br>
                             Montag | Ruhetag </h1>
                     </div>
                     <!-- Button -->
-                    <a href="#"
+                    <a data-aos="fade-up" data-aos-delay="600" href="#"
                         class="inline-flex items-center gap-5 mt-5 md:mt-10 border border-white rounded-full px-8 py-4 uppercase text-sm tracking-wide transition-all duration-300 bg-secondary text-primary hover:bg-white hover:border-primary group font-merriweathersans">
 
                         ANFAHRT
@@ -1291,7 +1317,7 @@
 
                 </div>
             </div>
-            <img src="assets/map.png" alt=""
+            <img data-aos="fade" src="assets/map.png" alt=""
                 class="lg:absolute right-0 bottom-0 h-[550px] lg:h-full scale-110 lg:h-full  lg:w-auto object-cover z-0  pointer-events-none">
 
         </section>
@@ -1308,20 +1334,20 @@
                 <!-- Left -->
                 <div class="lg:col-span-6">
 
-                    <img src="assets/icons/logo.svg" alt="Zur Kluse" class="w-40 mb-5 md:mb-10 hidden md:block">
+                    <img data-aos="fade-up" data-aos-delay="200" src="assets/icons/logo.svg" alt="Zur Kluse" class="w-40 mb-5 md:mb-10 hidden md:block">
                     <img src="assets/icons/Mlogo.svg" alt="Zur Kluse" class="w-40 mb-8 md:mb-10 mx-auto md:hidden">
 
-                    <img src="assets/icons/footer-heading.svg" alt="Ein Ort zum verweilen" class="mb-8 mx-auto md:mx-0">
+                    <img data-aos="fade-up" data-aos-delay="300" src="assets/icons/footer-heading.svg" alt="Ein Ort zum verweilen" class="mb-8 mx-auto md:mx-0">
 
                     <div class="hidden md:block md:max-w-md space-y-4 md:space-y-8 leading-8">
-                        <p class="text-sm">
+                        <p data-aos="fade-up" data-aos-delay="400" class="text-sm">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
                             sed diam nonumy eirmod tempor invidunt ut labore et dolore
                             magna aliquyam erat, sed diam voluptua. At vero eos et
                             accusam et justo duo dolores et ea rebum. Stet
                         </p>
 
-                        <p class="text-sm">
+                        <p data-aos="fade-up" data-aos-delay="500" class="text-sm">
                             dolore magna aliquyam erat, sed diam voluptua.
                             At vero eos et accusam et justo duo dolores et ea rebum.
                         </p>
@@ -1335,32 +1361,32 @@
                     <!-- Features -->
                     <div class="grid md:grid-cols-2 max-w-lg gap-y-4 mb-10 lg:mb-16">
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="600" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon1.svg" class="w-6">
                             <span>Der Klusee mit eigenem Steg</span>
                         </div>
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="700" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon2.svg" class="w-6">
                             <span>Die größte Schirmbar im Ruhrgebiet</span>
                         </div>
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="800" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon3.svg" class="w-6">
                             <span>Separate Picknickplätze</span>
                         </div>
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="900" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon4.svg" class="w-6">
                             <span>Eigene Brauerei mit Biergarten</span>
                         </div>
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="1000" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon5.svg" class="w-6">
                             <span>Zur Kluse Beats Eventreihe</span>
                         </div>
 
-                        <div class="flex items-center gap-4 text-xs">
+                        <div data-aos="fade-up" data-aos-delay="1100" class="flex items-center gap-4 text-xs">
                             <img src="assets/icons/icon6.svg" class="w-6">
                             <span>Hochzeitskapelle</span>
                         </div>
@@ -1370,14 +1396,14 @@
                     <!-- Contact -->
                     <div class="grid md:grid-cols-2 gap-16">
 
-                        <div>
+                        <div data-aos="fade-up" data-aos-delay="1200">
 
-                            <h3 class="text-secondary font-medium text-xl font-merriweather mb-2">
+                            <h3  class="text-secondary font-medium text-xl font-merriweather mb-2">
 
                                 Kontakt
                             </h3>
 
-                            <div class="space-y-1 text-xl leading-9">
+                            <div  class="space-y-1 text-xl leading-9">
 
                                 <ul class=" text-base font-light text-merriweathersans">
                                     <li>An d. Kluse 27b, 45133 Essen</li>
@@ -1402,7 +1428,7 @@
                         </div>
 
                         <!-- Sitemap -->
-                        <div class="hidden">
+                        <div data-aos="fade-up" data-aos-delay="1200" class="hidden md:block">
 
                             <h3 class="text-secondary font-medium text-xl font-merriweather mb-6 md:mb-2">
                                 Sitemap
